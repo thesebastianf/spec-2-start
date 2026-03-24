@@ -1,0 +1,174 @@
+<svg width="960" height="760" viewBox="0 0 960 760" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="headerGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#13111A"/>
+      <stop offset="100%" stop-color="#1E1B30"/>
+    </linearGradient>
+    <linearGradient id="btnGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#5B5EF4"/>
+      <stop offset="100%" stop-color="#7C3AED"/>
+    </linearGradient>
+    <linearGradient id="successGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#059669"/>
+      <stop offset="100%" stop-color="#10B981"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="960" height="760" fill="#F0F2F5"/>
+
+  <!-- Header -->
+  <rect width="960" height="52" fill="url(#headerGrad)"/>
+  <rect x="16" y="13" width="26" height="26" rx="7" fill="#5B5EF4"/>
+  <text x="29" y="30" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="800" fill="white" text-anchor="middle">S2</text>
+  <text x="50" y="33" font-family="'Segoe UI',Arial,sans-serif" font-size="16" font-weight="700" fill="white">Spec-2-Start</text>
+
+  <!-- Step bar — all done, step 6 active -->
+  <rect x="240" y="14" width="520" height="24" rx="12" fill="#ffffff0D"/>
+  <text x="282" y="30" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#22D3A5" text-anchor="middle">&#10003; Projekt</text>
+  <text x="350" y="30" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#22D3A5" text-anchor="middle">&#10003; Architektur</text>
+  <text x="426" y="30" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#22D3A5" text-anchor="middle">&#10003; Docker</text>
+  <text x="494" y="30" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#22D3A5" text-anchor="middle">&#10003; Agents</text>
+  <text x="574" y="30" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#22D3A5" text-anchor="middle">&#10003; Instructions</text>
+  <rect x="635" y="16" width="84" height="20" rx="10" fill="#5B5EF4"/>
+  <text x="677" y="30" font-family="'Segoe UI',Arial,sans-serif" font-size="10" font-weight="700" fill="white" text-anchor="middle">6 Generate</text>
+
+  <rect x="790" y="15" width="154" height="22" rx="11" fill="#22D3A515"/>
+  <circle cx="806" cy="26" r="5" fill="#22D3A5"/>
+  <text x="818" y="30" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#22D3A5">user/my-project</text>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!--  LEFT: Summary & File Tree                   -->
+  <!-- ═══════════════════════════════════════════ -->
+  <rect x="40" y="68" width="440" height="668" rx="14" fill="#ffffff" stroke="#E2E4E9" stroke-width="1"/>
+
+  <text x="64" y="102" font-family="'Segoe UI',Arial,sans-serif" font-size="20" font-weight="700" fill="#1C1B2E">Review &amp; Generieren</text>
+  <text x="64" y="120" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#6B7280">Pruefe alle generierten Dateien bevor sie ins Repo geschrieben werden.</text>
+
+  <!-- Summary cards row -->
+  <rect x="64" y="136" width="128" height="56" rx="8" fill="#EEEFFE"/>
+  <text x="128" y="158" font-family="'Segoe UI',Arial,sans-serif" font-size="22" font-weight="700" fill="#5B5EF4" text-anchor="middle">12</text>
+  <text x="128" y="176" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#6B7280" text-anchor="middle">Dateien</text>
+
+  <rect x="200" y="136" width="128" height="56" rx="8" fill="#F0FDF4"/>
+  <text x="264" y="158" font-family="'Segoe UI',Arial,sans-serif" font-size="22" font-weight="700" fill="#22C55E" text-anchor="middle">5</text>
+  <text x="264" y="176" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#6B7280" text-anchor="middle">Agents</text>
+
+  <rect x="336" y="136" width="128" height="56" rx="8" fill="#FFFBEB"/>
+  <text x="400" y="158" font-family="'Segoe UI',Arial,sans-serif" font-size="22" font-weight="700" fill="#F59E0B" text-anchor="middle">4</text>
+  <text x="400" y="176" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#6B7280" text-anchor="middle">Instructions</text>
+
+  <!-- File tree -->
+  <text x="64" y="216" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="600" letter-spacing="0.5" fill="#9CA3AF">DATEIBAUM</text>
+
+  <!-- Root folder -->
+  <text x="72" y="238" font-family="Consolas,monospace" font-size="11" fill="#374151">&#128193; user/my-project/</text>
+
+  <!-- .github folder -->
+  <text x="88" y="258" font-family="Consolas,monospace" font-size="11" fill="#6B7280">&#9500;&#9472; &#128193; .github/</text>
+  <text x="120" y="278" font-family="Consolas,monospace" font-size="11" fill="#5B5EF4">&#9500;&#9472; copilot-instructions.md</text>
+  <rect x="310" y="266" width="36" height="16" rx="4" fill="#DCFCE7"/>
+  <text x="328" y="278" font-family="'Segoe UI',Arial,sans-serif" font-size="8" fill="#166534" text-anchor="middle">neu</text>
+
+  <!-- .github/agents -->
+  <text x="120" y="298" font-family="Consolas,monospace" font-size="11" fill="#6B7280">&#9492;&#9472; &#128193; agents/</text>
+  <text x="152" y="318" font-family="Consolas,monospace" font-size="11" fill="#5B5EF4">&#9500;&#9472; orchestrator.agent.md</text>
+  <text x="152" y="338" font-family="Consolas,monospace" font-size="11" fill="#5B5EF4">&#9500;&#9472; frontend.agent.md</text>
+  <text x="152" y="358" font-family="Consolas,monospace" font-size="11" fill="#5B5EF4">&#9500;&#9472; backend.agent.md</text>
+  <text x="152" y="378" font-family="Consolas,monospace" font-size="11" fill="#5B5EF4">&#9500;&#9472; database.agent.md</text>
+  <text x="152" y="398" font-family="Consolas,monospace" font-size="11" fill="#5B5EF4">&#9492;&#9472; reviewer-qa.agent.md</text>
+
+  <!-- Root files -->
+  <text x="88" y="422" font-family="Consolas,monospace" font-size="11" fill="#5B5EF4">&#9500;&#9472; docker-compose.yaml-example</text>
+  <text x="88" y="442" font-family="Consolas,monospace" font-size="11" fill="#5B5EF4">&#9500;&#9472; .env-example</text>
+  <text x="88" y="462" font-family="Consolas,monospace" font-size="11" fill="#5B5EF4">&#9500;&#9472; .gitignore</text>
+  <text x="88" y="482" font-family="Consolas,monospace" font-size="11" fill="#5B5EF4">&#9500;&#9472; README.md</text>
+  <text x="88" y="502" font-family="Consolas,monospace" font-size="11" fill="#5B5EF4">&#9500;&#9472; Architecture.md</text>
+  <text x="88" y="522" font-family="Consolas,monospace" font-size="11" fill="#5B5EF4">&#9492;&#9472; init-local.sh</text>
+
+  <!-- Target info -->
+  <rect x="64" y="546" width="396" height="1" fill="#E2E4E9"/>
+
+  <text x="64" y="574" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="600" letter-spacing="0.5" fill="#9CA3AF">ZIEL</text>
+
+  <rect x="64" y="584" width="396" height="62" rx="8" fill="#F0FDF4" stroke="#BBF7D0" stroke-width="1"/>
+  <circle cx="84" cy="607" r="8" fill="#22C55E"/>
+  <text x="84" y="611" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="white" text-anchor="middle">&#10003;</text>
+  <text x="100" y="604" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="600" fill="#374151">GitHub: user/my-project</text>
+  <text x="100" y="622" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#6B7280">Branch: main  &#183;  Commit: "chore: initial repo setup via Spec-2-Start"</text>
+  <text x="100" y="638" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#9CA3AF">12 Dateien werden erstellt oder aktualisiert</text>
+
+  <!-- Nav -->
+  <rect x="64" y="660" width="110" height="36" rx="8" fill="#ffffff" stroke="#E2E4E9" stroke-width="1.5"/>
+  <text x="119" y="682" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#374151" text-anchor="middle">&#8592; Instructions</text>
+
+  <!-- Big CTA -->
+  <rect x="240" y="660" width="220" height="44" rx="10" fill="url(#successGrad)"/>
+  <text x="350" y="687" font-family="'Segoe UI',Arial,sans-serif" font-size="15" fill="white" text-anchor="middle" font-weight="700">&#128640;  Push to GitHub</text>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!--  RIGHT: File Preview                         -->
+  <!-- ═══════════════════════════════════════════ -->
+  <rect x="500" y="68" width="420" height="668" rx="14" fill="#0F1117" stroke="#30363D" stroke-width="1"/>
+
+  <!-- Preview header -->
+  <rect x="500" y="68" width="420" height="38" rx="14 14 0 0" fill="#161B22"/>
+  <rect x="500" y="90" width="420" height="16" fill="#161B22"/>
+  <text x="520" y="92" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="600" fill="#E6EDF3">Datei-Vorschau</text>
+  <text x="880" y="92" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#6B7280" text-anchor="end">Klicke auf eine Datei links</text>
+
+  <!-- File tab bar -->
+  <rect x="500" y="106" width="420" height="28" rx="0" fill="#1C2128"/>
+  <rect x="500" y="106" width="150" height="28" fill="#0F1117"/>
+  <rect x="500" y="132" width="150" height="2" fill="#5B5EF4"/>
+  <text x="512" y="124" font-family="Consolas,monospace" font-size="9" fill="#C9D1D9">orchestrator.agent.md</text>
+  <text x="660" y="124" font-family="Consolas,monospace" font-size="9" fill="#6B7280">README.md</text>
+  <text x="760" y="124" font-family="Consolas,monospace" font-size="9" fill="#6B7280">.gitignore</text>
+
+  <!-- Code: orchestrator.agent.md -->
+  <text x="516" y="156" font-family="Consolas,monospace" font-size="10" fill="#8B949E">---</text>
+  <text x="516" y="172" font-family="Consolas,monospace" font-size="10" fill="#79C0FF">name<tspan fill="#C9D1D9">: orchestrator</tspan></text>
+  <text x="516" y="188" font-family="Consolas,monospace" font-size="10" fill="#79C0FF">description<tspan fill="#C9D1D9">: |</tspan></text>
+  <text x="528" y="204" font-family="Consolas,monospace" font-size="10" fill="#A5D6FF">  Project Coordinator. Plans,</text>
+  <text x="528" y="220" font-family="Consolas,monospace" font-size="10" fill="#A5D6FF">  delegates and reviews all work.</text>
+  <text x="516" y="236" font-family="Consolas,monospace" font-size="10" fill="#79C0FF">tools<tspan fill="#C9D1D9">:</tspan></text>
+  <text x="528" y="252" font-family="Consolas,monospace" font-size="10" fill="#C9D1D9">  - codebase</text>
+  <text x="528" y="268" font-family="Consolas,monospace" font-size="10" fill="#C9D1D9">  - github</text>
+  <text x="528" y="284" font-family="Consolas,monospace" font-size="10" fill="#C9D1D9">  - run_in_terminal</text>
+  <text x="516" y="300" font-family="Consolas,monospace" font-size="10" fill="#8B949E">---</text>
+  <text x="516" y="320" font-family="Consolas,monospace" font-size="10" fill="#E6EDF3"># Orchestrator Agent</text>
+  <text x="516" y="340" font-family="Consolas,monospace" font-size="10" fill="#E6EDF3">## Accountability</text>
+  <text x="516" y="356" font-family="Consolas,monospace" font-size="10" fill="#A5D6FF">**Role:** Project Coordinator</text>
+  <text x="516" y="372" font-family="Consolas,monospace" font-size="10" fill="#A5D6FF">**Scope:** Project-wide</text>
+  <text x="516" y="388" font-family="Consolas,monospace" font-size="10" fill="#A5D6FF">**Delegates to:** Frontend,</text>
+  <text x="528" y="404" font-family="Consolas,monospace" font-size="10" fill="#A5D6FF">Backend, Database, QA Agents</text>
+  <text x="516" y="424" font-family="Consolas,monospace" font-size="10" fill="#E6EDF3">## Responsibilities</text>
+  <text x="516" y="440" font-family="Consolas,monospace" font-size="10" fill="#7EE787">- Break down user requests</text>
+  <text x="516" y="456" font-family="Consolas,monospace" font-size="10" fill="#7EE787">- Delegate to specialist agents</text>
+  <text x="516" y="472" font-family="Consolas,monospace" font-size="10" fill="#7EE787">- Review &amp; merge results</text>
+  <text x="516" y="488" font-family="Consolas,monospace" font-size="10" fill="#7EE787">- Maintain project consistency</text>
+  <text x="516" y="504" font-family="Consolas,monospace" font-size="10" fill="#7EE787">- Update Architecture.md</text>
+  <text x="516" y="524" font-family="Consolas,monospace" font-size="10" fill="#E6EDF3">## Instructions</text>
+  <text x="516" y="540" font-family="Consolas,monospace" font-size="10" fill="#8B949E">You are the project coordinator.</text>
+  <text x="516" y="556" font-family="Consolas,monospace" font-size="10" fill="#8B949E">Never implement features directly.</text>
+  <text x="516" y="572" font-family="Consolas,monospace" font-size="10" fill="#8B949E">Always delegate to the right</text>
+  <text x="516" y="588" font-family="Consolas,monospace" font-size="10" fill="#8B949E">specialist agent. Verify all</text>
+  <text x="516" y="604" font-family="Consolas,monospace" font-size="10" fill="#8B949E">changes are consistent with the</text>
+  <text x="516" y="620" font-family="Consolas,monospace" font-size="10" fill="#8B949E">architecture before merging.</text>
+  <text x="516" y="640" font-family="Consolas,monospace" font-size="10" fill="#E6EDF3">## applyTo</text>
+  <text x="516" y="656" font-family="Consolas,monospace" font-size="10" fill="#C9D1D9">  - "**/*"</text>
+
+  <!-- Footer actions -->
+  <rect x="500" y="696" width="420" height="40" rx="0 0 14 14" fill="#161B22"/>
+  <rect x="500" y="696" width="420" height="1" fill="#30363D"/>
+
+  <rect x="516" y="706" width="80" height="22" rx="4" fill="#21262D" stroke="#30363D" stroke-width="0.75"/>
+  <text x="556" y="721" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#8B949E" text-anchor="middle">Kopieren</text>
+
+  <rect x="604" y="706" width="100" height="22" rx="4" fill="#238636"/>
+  <text x="654" y="721" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="white" text-anchor="middle">&#8595; Download .zip</text>
+
+  <text x="720" y="721" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#6B7280">12 Dateien  &#183;  ~4.2 KB</text>
+
+  <!-- Bottom accent -->
+  <rect x="0" y="754" width="960" height="6" fill="url(#btnGrad)"/>
+</svg>

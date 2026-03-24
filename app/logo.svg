@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="120" y2="120" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#5B5EF4"/>
+      <stop offset="100%" stop-color="#818CF8"/>
+    </linearGradient>
+    <linearGradient id="rocket" x1="40" y1="20" x2="80" y2="100" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#E0E7FF"/>
+    </linearGradient>
+    <linearGradient id="flame" x1="60" y1="85" x2="60" y2="110" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#F59E0B"/>
+      <stop offset="50%" stop-color="#EF4444"/>
+      <stop offset="100%" stop-color="#EF444400"/>
+    </linearGradient>
+  </defs>
+  <!-- Rounded square background -->
+  <rect width="120" height="120" rx="24" fill="url(#bg)"/>
+  <!-- Document shape (tilted, behind rocket) -->
+  <g opacity="0.25">
+    <rect x="28" y="30" width="36" height="46" rx="4" fill="white" transform="rotate(-8 46 53)"/>
+    <line x1="36" y1="42" x2="56" y2="39" stroke="#5B5EF4" stroke-width="2.5" stroke-linecap="round" transform="rotate(-8 46 41)"/>
+    <line x1="36" y1="50" x2="52" y2="47.5" stroke="#5B5EF4" stroke-width="2.5" stroke-linecap="round" transform="rotate(-8 44 49)"/>
+    <line x1="36" y1="58" x2="48" y2="56" stroke="#5B5EF4" stroke-width="2.5" stroke-linecap="round" transform="rotate(-8 42 57)"/>
+  </g>
+  <!-- Rocket body -->
+  <path d="M60 18 C60 18, 78 36, 78 62 C78 74, 72 82, 60 86 C48 82, 42 74, 42 62 C42 36, 60 18, 60 18Z" fill="url(#rocket)" stroke="white" stroke-width="1"/>
+  <!-- Rocket window -->
+  <circle cx="60" cy="48" r="9" fill="#5B5EF4" stroke="#4347C9" stroke-width="1.5"/>
+  <circle cx="60" cy="48" r="5" fill="#818CF8" opacity="0.6"/>
+  <circle cx="57" cy="45" r="2" fill="white" opacity="0.5"/>
+  <!-- Rocket fins -->
+  <path d="M42 65 C42 65, 32 72, 34 84 L42 76Z" fill="#E0E7FF" stroke="white" stroke-width="0.5"/>
+  <path d="M78 65 C78 65, 88 72, 86 84 L78 76Z" fill="#E0E7FF" stroke="white" stroke-width="0.5"/>
+  <!-- Flame -->
+  <path d="M52 86 C52 86, 56 100, 60 108 C64 100, 68 86, 68 86 C65 90, 55 90, 52 86Z" fill="url(#flame)"/>
+  <path d="M55 86 C55 86, 58 96, 60 101 C62 96, 65 86, 65 86 C63 89, 57 89, 55 86Z" fill="#FCD34D" opacity="0.8"/>
+  <!-- Spec lines on rocket body -->
+  <line x1="52" y1="62" x2="68" y2="62" stroke="#5B5EF4" stroke-width="1.5" stroke-linecap="round" opacity="0.4"/>
+  <line x1="54" y1="67" x2="66" y2="67" stroke="#5B5EF4" stroke-width="1.5" stroke-linecap="round" opacity="0.3"/>
+  <line x1="55" y1="72" x2="65" y2="72" stroke="#5B5EF4" stroke-width="1.5" stroke-linecap="round" opacity="0.2"/>
+</svg>

@@ -1,0 +1,168 @@
+<svg width="960" height="720" viewBox="0 0 960 720" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="headerGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#13111A"/>
+      <stop offset="100%" stop-color="#1E1B30"/>
+    </linearGradient>
+    <linearGradient id="btnGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#5B5EF4"/>
+      <stop offset="100%" stop-color="#7C3AED"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="960" height="720" fill="#F0F2F5"/>
+
+  <!-- Header -->
+  <rect width="960" height="52" fill="url(#headerGrad)"/>
+  <rect x="16" y="13" width="26" height="26" rx="7" fill="#5B5EF4"/>
+  <text x="29" y="30" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="800" fill="white" text-anchor="middle">S2</text>
+  <text x="50" y="33" font-family="'Segoe UI',Arial,sans-serif" font-size="16" font-weight="700" fill="white">Spec-2-Start</text>
+
+  <!-- Step bar -->
+  <rect x="240" y="14" width="520" height="24" rx="12" fill="#ffffff0D"/>
+  <text x="282" y="30" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#22D3A5" text-anchor="middle">&#10003; Projekt</text>
+  <text x="350" y="30" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#22D3A5" text-anchor="middle">&#10003; Architektur</text>
+  <text x="426" y="30" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#22D3A5" text-anchor="middle">&#10003; Docker</text>
+  <text x="494" y="30" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#22D3A5" text-anchor="middle">&#10003; Agents</text>
+  <rect x="536" y="16" width="104" height="20" rx="10" fill="#5B5EF4"/>
+  <text x="588" y="30" font-family="'Segoe UI',Arial,sans-serif" font-size="10" font-weight="700" fill="white" text-anchor="middle">5 Instructions</text>
+  <text x="690" y="30" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#6B7280" text-anchor="middle">6 Generate</text>
+
+  <rect x="790" y="15" width="154" height="22" rx="11" fill="#22D3A515"/>
+  <circle cx="806" cy="26" r="5" fill="#22D3A5"/>
+  <text x="818" y="30" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#22D3A5">user/my-project</text>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!--  LEFT: Instructions Editor                   -->
+  <!-- ═══════════════════════════════════════════ -->
+  <rect x="40" y="68" width="520" height="628" rx="14" fill="#ffffff" stroke="#E2E4E9" stroke-width="1"/>
+
+  <text x="64" y="100" font-family="'Segoe UI',Arial,sans-serif" font-size="20" font-weight="700" fill="#1C1B2E">Projekt-Instructions</text>
+  <text x="64" y="118" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#6B7280">Regeln die IMMER gelten. Werden in copilot-instructions.md geschrieben.</text>
+
+  <!-- Default instruction 1: Prompt Logging -->
+  <rect x="64" y="136" width="472" height="76" rx="9" fill="#F0FDF4" stroke="#BBF7D0" stroke-width="1.5"/>
+  <rect x="80" y="148" width="6" height="52" rx="3" fill="#22C55E"/>
+  <circle cx="102" cy="154" r="10" fill="#22C55E"/>
+  <text x="102" y="158" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="white" text-anchor="middle">&#10003;</text>
+  <text x="120" y="158" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#1C1B2E">Prompt Dokumentation</text>
+  <rect x="264" y="146" width="52" height="18" rx="4" fill="#DCFCE7"/>
+  <text x="290" y="159" font-family="'Segoe UI',Arial,sans-serif" font-size="9" fill="#166534" text-anchor="middle">default</text>
+  <text x="120" y="178" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#6B7280">Jeder ausgefuehrte Prompt wird in</text>
+  <text x="120" y="192" font-family="Consolas,monospace" font-size="10" fill="#5B5EF4" font-weight="600">executed-prompts.md</text>
+  <text x="248" y="192" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#6B7280"> dokumentiert mit Zeitstempel.</text>
+  <!-- Edit / toggle -->
+  <rect x="482" y="148" width="36" height="24" rx="5" fill="#DCFCE7"/>
+  <text x="500" y="164" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#166534" text-anchor="middle">AN</text>
+
+  <!-- Default instruction 2: Docs aktuell halten -->
+  <rect x="64" y="222" width="472" height="76" rx="9" fill="#F0FDF4" stroke="#BBF7D0" stroke-width="1.5"/>
+  <rect x="80" y="234" width="6" height="52" rx="3" fill="#22C55E"/>
+  <circle cx="102" cy="240" r="10" fill="#22C55E"/>
+  <text x="102" y="244" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="white" text-anchor="middle">&#10003;</text>
+  <text x="120" y="244" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#1C1B2E">Docs immer aktuell</text>
+  <rect x="252" y="232" width="52" height="18" rx="4" fill="#DCFCE7"/>
+  <text x="278" y="245" font-family="'Segoe UI',Arial,sans-serif" font-size="9" fill="#166534" text-anchor="middle">default</text>
+  <text x="120" y="264" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#6B7280">README.md und Architecture.md muessen bei jeder</text>
+  <text x="120" y="278" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#6B7280">relevanten Aenderung aktualisiert werden.</text>
+  <rect x="482" y="234" width="36" height="24" rx="5" fill="#DCFCE7"/>
+  <text x="500" y="250" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#166534" text-anchor="middle">AN</text>
+
+  <!-- Default instruction 3: SVG Mockups -->
+  <rect x="64" y="308" width="472" height="76" rx="9" fill="#F0FDF4" stroke="#BBF7D0" stroke-width="1.5"/>
+  <rect x="80" y="320" width="6" height="52" rx="3" fill="#22C55E"/>
+  <circle cx="102" cy="326" r="10" fill="#22C55E"/>
+  <text x="102" y="330" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="white" text-anchor="middle">&#10003;</text>
+  <text x="120" y="330" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#1C1B2E">SVG Mockups erstellen</text>
+  <rect x="274" y="318" width="52" height="18" rx="4" fill="#DCFCE7"/>
+  <text x="300" y="331" font-family="'Segoe UI',Arial,sans-serif" font-size="9" fill="#166534" text-anchor="middle">default</text>
+  <text x="120" y="350" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#6B7280">Fuer alle UI-Seiten SVG Mockups erstellen bevor</text>
+  <text x="120" y="364" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#6B7280">die Implementierung beginnt.</text>
+  <rect x="482" y="320" width="36" height="24" rx="5" fill="#DCFCE7"/>
+  <text x="500" y="336" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#166534" text-anchor="middle">AN</text>
+
+  <!-- Custom instruction (user added) -->
+  <rect x="64" y="396" width="472" height="76" rx="9" fill="#EEEFFE" stroke="#C7C9FE" stroke-width="1.5"/>
+  <rect x="80" y="408" width="6" height="52" rx="3" fill="#5B5EF4"/>
+  <circle cx="102" cy="414" r="10" fill="#5B5EF4"/>
+  <text x="102" y="418" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="white" text-anchor="middle">&#10003;</text>
+  <text x="120" y="418" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#1C1B2E">Git Commit Konventionen</text>
+  <rect x="286" y="406" width="50" height="18" rx="4" fill="#EEEFFE"/>
+  <text x="311" y="419" font-family="'Segoe UI',Arial,sans-serif" font-size="9" fill="#5B5EF4" text-anchor="middle">custom</text>
+  <text x="120" y="438" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#6B7280">Conventional Commits verwenden: feat:, fix:, docs:, chore:</text>
+  <text x="120" y="452" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#6B7280">Immer mit Scope z.B. feat(api): add user endpoint</text>
+  <rect x="482" y="408" width="36" height="24" rx="5" fill="#EEEFFE"/>
+  <text x="500" y="424" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#5B5EF4" text-anchor="middle">AN</text>
+
+  <!-- Add instruction -->
+  <rect x="64" y="486" width="472" height="42" rx="9" fill="#FAFAFA" stroke="#C4C6D4" stroke-width="1.5" stroke-dasharray="6 4"/>
+  <text x="300" y="512" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#5B5EF4" text-anchor="middle" font-weight="500">+  Neue Instruction hinzufuegen</text>
+
+  <!-- Free-text area -->
+  <rect x="64" y="544" width="472" height="1" fill="#E2E4E9"/>
+  <text x="64" y="568" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="600" fill="#374151">Zusaetzliche Freitext-Instructions</text>
+  <rect x="64" y="578" width="472" height="80" rx="8" fill="#F9FAFB" stroke="#D1D5DB" stroke-width="1.5"/>
+  <text x="80" y="598" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#9CA3AF">Schreibe hier weitere Regeln die immer gelten sollen...</text>
+  <text x="80" y="616" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#9CA3AF">z.B. "Verwende nie any in TypeScript"</text>
+
+  <!-- Nav -->
+  <rect x="64" y="668" width="96" height="36" rx="8" fill="#ffffff" stroke="#E2E4E9" stroke-width="1.5"/>
+  <text x="112" y="690" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#374151" text-anchor="middle">&#8592; Agents</text>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!--  RIGHT: Live Preview                         -->
+  <!-- ═══════════════════════════════════════════ -->
+  <rect x="580" y="68" width="340" height="628" rx="14" fill="#0F1117" stroke="#30363D" stroke-width="1"/>
+
+  <!-- Tab bar -->
+  <rect x="580" y="68" width="340" height="36" rx="14 14 0 0" fill="#161B22"/>
+  <rect x="580" y="88" width="340" height="16" fill="#161B22"/>
+  <rect x="580" y="102" width="175" height="2" fill="#5B5EF4"/>
+  <text x="596" y="92" font-family="Consolas,monospace" font-size="10" fill="#E6EDF3">copilot-instructions.md</text>
+  <text x="768" y="92" font-family="Consolas,monospace" font-size="10" fill="#6B7280">AGENTS.md</text>
+
+  <!-- Code content -->
+  <text x="596" y="126" font-family="Consolas,monospace" font-size="10" fill="#E6EDF3"># Copilot Instructions</text>
+  <text x="596" y="144" font-family="Consolas,monospace" font-size="10" fill="#8B949E"/>
+  <text x="596" y="160" font-family="Consolas,monospace" font-size="10" fill="#E6EDF3">## Project</text>
+  <text x="596" y="176" font-family="Consolas,monospace" font-size="10" fill="#8B949E">team-management-saas</text>
+  <text x="596" y="192" font-family="Consolas,monospace" font-size="10" fill="#8B949E">TypeScript / Node.js</text>
+  <text x="596" y="212" font-family="Consolas,monospace" font-size="10" fill="#E6EDF3">## Instructions</text>
+  <text x="596" y="232" font-family="Consolas,monospace" font-size="10" fill="#E6EDF3">### Prompt Dokumentation</text>
+  <text x="596" y="248" font-family="Consolas,monospace" font-size="10" fill="#7EE787">Every executed prompt MUST be</text>
+  <text x="596" y="264" font-family="Consolas,monospace" font-size="10" fill="#7EE787">logged in executed-prompts.md</text>
+  <text x="596" y="280" font-family="Consolas,monospace" font-size="10" fill="#7EE787">with a timestamp.</text>
+  <text x="596" y="300" font-family="Consolas,monospace" font-size="10" fill="#E6EDF3">### Documentation</text>
+  <text x="596" y="316" font-family="Consolas,monospace" font-size="10" fill="#7EE787">README.md and Architecture.md</text>
+  <text x="596" y="332" font-family="Consolas,monospace" font-size="10" fill="#7EE787">MUST be kept up-to-date with</text>
+  <text x="596" y="348" font-family="Consolas,monospace" font-size="10" fill="#7EE787">every relevant change.</text>
+  <text x="596" y="368" font-family="Consolas,monospace" font-size="10" fill="#E6EDF3">### SVG Mockups</text>
+  <text x="596" y="384" font-family="Consolas,monospace" font-size="10" fill="#7EE787">Create SVG mockups for all</text>
+  <text x="596" y="400" font-family="Consolas,monospace" font-size="10" fill="#7EE787">UI pages BEFORE starting</text>
+  <text x="596" y="416" font-family="Consolas,monospace" font-size="10" fill="#7EE787">implementation.</text>
+  <text x="596" y="436" font-family="Consolas,monospace" font-size="10" fill="#E6EDF3">### Git Conventions</text>
+  <text x="596" y="452" font-family="Consolas,monospace" font-size="10" fill="#7EE787">Use Conventional Commits:</text>
+  <text x="596" y="468" font-family="Consolas,monospace" font-size="10" fill="#7EE787">feat:, fix:, docs:, chore:</text>
+  <text x="596" y="484" font-family="Consolas,monospace" font-size="10" fill="#7EE787">Always include scope, e.g.</text>
+  <text x="596" y="500" font-family="Consolas,monospace" font-size="10" fill="#A5D6FF">feat(api): add user endpoint</text>
+
+  <text x="596" y="524" font-family="Consolas,monospace" font-size="10" fill="#E6EDF3">## Docker &amp; Env Standard</text>
+  <text x="596" y="540" font-family="Consolas,monospace" font-size="10" fill="#8B949E">See standards/docker/ for</text>
+  <text x="596" y="556" font-family="Consolas,monospace" font-size="10" fill="#8B949E">the complete docker &amp; env</text>
+  <text x="596" y="572" font-family="Consolas,monospace" font-size="10" fill="#8B949E">setup instructions...</text>
+
+  <!-- Preview footer -->
+  <rect x="580" y="656" width="340" height="40" rx="0 0 14 14" fill="#161B22"/>
+  <rect x="580" y="656" width="340" height="1" fill="#30363D"/>
+  <rect x="596" y="666" width="80" height="22" rx="4" fill="#21262D" stroke="#30363D" stroke-width="0.75"/>
+  <text x="636" y="681" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#8B949E" text-anchor="middle">Kopieren</text>
+
+  <text x="760" y="681" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#6B7280">4 Instructions  &#183;  Live-Vorschau</text>
+
+  <!-- CTA bottom -->
+  <rect x="768" y="668" width="150" height="36" rx="8" fill="url(#btnGrad)"/>
+  <text x="843" y="690" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="white" text-anchor="middle" font-weight="600">Review &amp; Push &#8250;</text>
+
+  <!-- Bottom accent -->
+  <rect x="0" y="714" width="960" height="6" fill="url(#btnGrad)"/>
+</svg>

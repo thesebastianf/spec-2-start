@@ -1,0 +1,170 @@
+<svg width="960" height="640" viewBox="0 0 960 640" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="headerGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#13111A"/>
+      <stop offset="100%" stop-color="#1E1B30"/>
+    </linearGradient>
+    <linearGradient id="btnGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#5B5EF4"/>
+      <stop offset="100%" stop-color="#7C3AED"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="960" height="640" fill="#F0F2F5"/>
+
+  <!-- Header -->
+  <rect width="960" height="52" fill="url(#headerGrad)"/>
+  <rect x="16" y="13" width="26" height="26" rx="7" fill="#5B5EF4"/>
+  <text x="29" y="30" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="800" fill="white" text-anchor="middle">S2</text>
+  <text x="50" y="33" font-family="'Segoe UI',Arial,sans-serif" font-size="16" font-weight="700" fill="white" letter-spacing="-0.3">Spec-2-Start</text>
+
+  <!-- Step bar -->
+  <rect x="240" y="14" width="520" height="24" rx="12" fill="#ffffff0D"/>
+  <!-- Step 1 active -->
+  <rect x="244" y="16" width="76" height="20" rx="10" fill="#5B5EF4"/>
+  <text x="282" y="30" font-family="'Segoe UI',Arial,sans-serif" font-size="10" font-weight="700" fill="white" text-anchor="middle">1 Projekt</text>
+  <!-- Step 2-6 pending -->
+  <text x="348" y="30" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#6B7280" text-anchor="middle">2 Architektur</text>
+  <text x="432" y="30" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#6B7280" text-anchor="middle">3 Docker</text>
+  <text x="510" y="30" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#6B7280" text-anchor="middle">4 Agents</text>
+  <text x="594" y="30" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#6B7280" text-anchor="middle">5 Instructions</text>
+  <text x="688" y="30" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#6B7280" text-anchor="middle">6 Generate</text>
+
+  <!-- Connected repo badge (top right) -->
+  <rect x="790" y="15" width="154" height="22" rx="11" fill="#22D3A515"/>
+  <circle cx="806" cy="26" r="5" fill="#22D3A5"/>
+  <text x="818" y="30" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#22D3A5" font-weight="500">user/my-project</text>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!--  LEFT: Input area                            -->
+  <!-- ═══════════════════════════════════════════ -->
+  <rect x="40" y="68" width="520" height="548" rx="14" fill="#ffffff" stroke="#E2E4E9" stroke-width="1"/>
+
+  <!-- Title -->
+  <text x="64" y="102" font-family="'Segoe UI',Arial,sans-serif" font-size="20" font-weight="700" fill="#1C1B2E">Was baust du?</text>
+  <text x="64" y="122" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#6B7280">Beschreibe dein Projekt in einfacher Sprache. Die KI erstellt daraus die technische Architektur.</text>
+
+  <!-- Textarea -->
+  <rect x="64" y="140" width="472" height="200" rx="10" fill="#F9FAFB" stroke="#D1D5DB" stroke-width="1.5"/>
+  <text x="80" y="164" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#374151">Ich baue eine SaaS Plattform fuer Teammanagement.</text>
+  <text x="80" y="184" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#374151">User koennen Teams erstellen, Aufgaben zuweisen und</text>
+  <text x="80" y="204" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#374151">den Fortschritt tracken. Es soll ein Dashboard geben,</text>
+  <text x="80" y="224" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#374151">Benachrichtigungen per E-Mail und eine REST API fuer</text>
+  <text x="80" y="244" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#374151">Integrationen mit anderen Tools.</text>
+  <text x="80" y="274" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#9CA3AF">|</text>
+
+  <!-- Character count -->
+  <text x="520" y="330" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#9CA3AF" text-anchor="end">243 / 2000</text>
+
+  <!-- Quick Templates -->
+  <text x="64" y="370" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="600" letter-spacing="0.5" fill="#9CA3AF">SCHNELLSTART-VORLAGEN</text>
+
+  <!-- Template chips -->
+  <rect x="64" y="382" width="92" height="30" rx="7" fill="#EEEFFE" stroke="#C7C9FE" stroke-width="1"/>
+  <text x="110" y="401" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#5B5EF4" text-anchor="middle">SaaS App</text>
+
+  <rect x="164" y="382" width="76" height="30" rx="7" fill="#F9FAFB" stroke="#E2E4E9" stroke-width="1"/>
+  <text x="202" y="401" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#6B7280" text-anchor="middle">CLI Tool</text>
+
+  <rect x="248" y="382" width="110" height="30" rx="7" fill="#F9FAFB" stroke="#E2E4E9" stroke-width="1"/>
+  <text x="303" y="401" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#6B7280" text-anchor="middle">Microservices</text>
+
+  <rect x="366" y="382" width="72" height="30" rx="7" fill="#F9FAFB" stroke="#E2E4E9" stroke-width="1"/>
+  <text x="402" y="401" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#6B7280" text-anchor="middle">API only</text>
+
+  <rect x="64" y="420" width="104" height="30" rx="7" fill="#F9FAFB" stroke="#E2E4E9" stroke-width="1"/>
+  <text x="116" y="439" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#6B7280" text-anchor="middle">Mobile App</text>
+
+  <rect x="176" y="420" width="120" height="30" rx="7" fill="#F9FAFB" stroke="#E2E4E9" stroke-width="1"/>
+  <text x="236" y="439" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#6B7280" text-anchor="middle">Data Pipeline</text>
+
+  <rect x="304" y="420" width="96" height="30" rx="7" fill="#F9FAFB" stroke="#E2E4E9" stroke-width="1"/>
+  <text x="352" y="439" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#6B7280" text-anchor="middle">E-Commerce</text>
+
+  <!-- Additional Options -->
+  <rect x="64" y="470" width="472" height="1" fill="#E2E4E9"/>
+
+  <text x="64" y="498" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="600" fill="#374151">Projektname</text>
+  <rect x="64" y="506" width="220" height="36" rx="7" fill="#F9FAFB" stroke="#D1D5DB" stroke-width="1.5"/>
+  <text x="80" y="528" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#374151">team-management-saas</text>
+
+  <text x="300" y="498" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="600" fill="#374151">Primaere Sprache</text>
+  <rect x="300" y="506" width="236" height="36" rx="7" fill="#F9FAFB" stroke="#D1D5DB" stroke-width="1.5"/>
+  <text x="316" y="528" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#374151">TypeScript / Node.js</text>
+  <text x="520" y="528" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#9CA3AF">&#9662;</text>
+
+  <!-- Navigation -->
+  <rect x="64" y="562" width="96" height="36" rx="8" fill="#ffffff" stroke="#E2E4E9" stroke-width="1.5"/>
+  <text x="112" y="584" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#374151" text-anchor="middle">&#8592; Repo</text>
+
+  <rect x="420" y="562" width="116" height="36" rx="8" fill="url(#btnGrad)"/>
+  <text x="478" y="584" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="white" text-anchor="middle" font-weight="600">Analysieren &#8250;</text>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!--  RIGHT: AI Hint / Preview                   -->
+  <!-- ═══════════════════════════════════════════ -->
+  <rect x="580" y="68" width="340" height="548" rx="14" fill="#ffffff" stroke="#E2E4E9" stroke-width="1"/>
+
+  <text x="604" y="102" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#1C1B2E">Was passiert als naechstes?</text>
+
+  <!-- AI processing info -->
+  <rect x="604" y="114" width="292" height="120" rx="10" fill="#F8F9FC"/>
+
+  <circle cx="624" cy="140" r="10" fill="#EEEFFE"/>
+  <text x="624" y="144" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#5B5EF4" text-anchor="middle">1</text>
+  <text x="642" y="144" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#374151">KI analysiert deine Beschreibung</text>
+
+  <circle cx="624" cy="166" r="10" fill="#EEEFFE"/>
+  <text x="624" y="170" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#5B5EF4" text-anchor="middle">2</text>
+  <text x="642" y="170" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#374151">Erzeugt technische Architektur</text>
+
+  <circle cx="624" cy="192" r="10" fill="#EEEFFE"/>
+  <text x="624" y="196" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#5B5EF4" text-anchor="middle">3</text>
+  <text x="642" y="196" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#374151">Schlaegt Stack &amp; Services vor</text>
+
+  <circle cx="624" cy="218" r="10" fill="#EEEFFE"/>
+  <text x="624" y="222" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#5B5EF4" text-anchor="middle">4</text>
+  <text x="642" y="222" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#374151">Du kannst alles anpassen</text>
+
+  <!-- Detected keywords -->
+  <text x="604" y="260" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="600" letter-spacing="0.5" fill="#9CA3AF">ERKANNTE BEGRIFFE</text>
+
+  <rect x="604" y="272" width="60" height="24" rx="5" fill="#DBEAFE"/>
+  <text x="634" y="288" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#2563EB" text-anchor="middle">SaaS</text>
+
+  <rect x="670" y="272" width="52" height="24" rx="5" fill="#DBEAFE"/>
+  <text x="696" y="288" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#2563EB" text-anchor="middle">Teams</text>
+
+  <rect x="728" y="272" width="88" height="24" rx="5" fill="#DBEAFE"/>
+  <text x="772" y="288" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#2563EB" text-anchor="middle">Dashboard</text>
+
+  <rect x="604" y="302" width="72" height="24" rx="5" fill="#DBEAFE"/>
+  <text x="640" y="318" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#2563EB" text-anchor="middle">REST API</text>
+
+  <rect x="682" y="302" width="58" height="24" rx="5" fill="#DBEAFE"/>
+  <text x="711" y="318" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#2563EB" text-anchor="middle">E-Mail</text>
+
+  <rect x="746" y="302" width="78" height="24" rx="5" fill="#DBEAFE"/>
+  <text x="785" y="318" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#2563EB" text-anchor="middle">Aufgaben</text>
+
+  <!-- Suggested stack preview -->
+  <rect x="604" y="346" width="292" height="1" fill="#E2E4E9"/>
+  <text x="604" y="374" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="600" letter-spacing="0.5" fill="#9CA3AF">VORAUSSICHTLICHER STACK</text>
+
+  <rect x="604" y="386" width="292" height="36" rx="7" fill="#F0FDF4" stroke="#BBF7D0" stroke-width="1"/>
+  <text x="620" y="408" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#047857">Frontend:  React / Next.js</text>
+
+  <rect x="604" y="428" width="292" height="36" rx="7" fill="#F0FDF4" stroke="#BBF7D0" stroke-width="1"/>
+  <text x="620" y="450" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#047857">Backend:  Node.js / Express</text>
+
+  <rect x="604" y="470" width="292" height="36" rx="7" fill="#F0FDF4" stroke="#BBF7D0" stroke-width="1"/>
+  <text x="620" y="492" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#047857">Datenbank:  PostgreSQL + Redis</text>
+
+  <rect x="604" y="512" width="292" height="36" rx="7" fill="#F0FDF4" stroke="#BBF7D0" stroke-width="1"/>
+  <text x="620" y="534" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#047857">Infra:  Docker Compose / nginx</text>
+
+  <text x="604" y="572" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#9CA3AF">* Stack-Vorschlag basiert auf Analyse, aenderbar im naechsten Schritt</text>
+
+  <!-- Bottom accent -->
+  <rect x="0" y="634" width="960" height="6" fill="url(#btnGrad)"/>
+</svg>

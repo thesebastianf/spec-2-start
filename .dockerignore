@@ -1,0 +1,6 @@
+# Exclude everything not needed in the Docker image
+# Build context = repo root (set by docker-compose context: ..)
+**
+!app/
+!app/**
+!docker/nginx.conf

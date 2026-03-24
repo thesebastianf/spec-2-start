@@ -1,0 +1,178 @@
+<svg width="960" height="700" viewBox="0 0 960 700" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="headerGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#13111A"/>
+      <stop offset="100%" stop-color="#1E1B30"/>
+    </linearGradient>
+    <linearGradient id="btnGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#5B5EF4"/>
+      <stop offset="100%" stop-color="#7C3AED"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="960" height="700" fill="#F0F2F5"/>
+
+  <!-- Header -->
+  <rect width="960" height="52" fill="url(#headerGrad)"/>
+  <rect x="16" y="13" width="26" height="26" rx="7" fill="#5B5EF4"/>
+  <text x="29" y="30" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="800" fill="white" text-anchor="middle">S2</text>
+  <text x="50" y="33" font-family="'Segoe UI',Arial,sans-serif" font-size="16" font-weight="700" fill="white" letter-spacing="-0.3">Spec-2-Start</text>
+
+  <!-- Step bar -->
+  <rect x="240" y="14" width="520" height="24" rx="12" fill="#ffffff0D"/>
+  <rect x="244" y="16" width="76" height="20" rx="10" fill="#22D3A530"/>
+  <text x="282" y="30" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#22D3A5" text-anchor="middle">&#10003; Projekt</text>
+  <rect x="324" y="16" width="90" height="20" rx="10" fill="#5B5EF4"/>
+  <text x="369" y="30" font-family="'Segoe UI',Arial,sans-serif" font-size="10" font-weight="700" fill="white" text-anchor="middle">2 Architektur</text>
+  <text x="440" y="30" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#6B7280" text-anchor="middle">3 Docker</text>
+  <text x="510" y="30" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#6B7280" text-anchor="middle">4 Agents</text>
+  <text x="590" y="30" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#6B7280" text-anchor="middle">5 Instructions</text>
+  <text x="680" y="30" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#6B7280" text-anchor="middle">6 Generate</text>
+
+  <!-- Repo badge -->
+  <rect x="790" y="15" width="154" height="22" rx="11" fill="#22D3A515"/>
+  <circle cx="806" cy="26" r="5" fill="#22D3A5"/>
+  <text x="818" y="30" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#22D3A5">user/my-project</text>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!--  AI-Generated Architecture (editable)       -->
+  <!-- ═══════════════════════════════════════════ -->
+  <rect x="40" y="68" width="880" height="608" rx="14" fill="#ffffff" stroke="#E2E4E9" stroke-width="1"/>
+
+  <!-- Title bar -->
+  <text x="64" y="100" font-family="'Segoe UI',Arial,sans-serif" font-size="20" font-weight="700" fill="#1C1B2E">Technische Architektur</text>
+  <rect x="282" y="84" width="84" height="22" rx="5" fill="#EEEFFE"/>
+  <text x="324" y="99" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#5B5EF4" text-anchor="middle" font-weight="600">KI-generiert</text>
+  <text x="64" y="118" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#6B7280">Basierend auf deiner Beschreibung. Alles editierbar — klicke auf einen Block zum Aendern.</text>
+
+  <!-- Regenerate button -->
+  <rect x="730" y="82" width="166" height="32" rx="7" fill="#EEEFFE" stroke="#C7C9FE" stroke-width="1"/>
+  <text x="813" y="102" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#5B5EF4" text-anchor="middle" font-weight="500">&#8635;  Neu generieren</text>
+
+  <!-- ── Architecture diagram area ── -->
+  <rect x="64" y="132" width="840" height="280" rx="10" fill="#FAFAFB" stroke="#E2E4E9" stroke-width="1"/>
+
+  <!-- Frontend box -->
+  <rect x="88" y="152" width="180" height="80" rx="8" fill="#EEF2FF" stroke="#818CF8" stroke-width="1.5"/>
+  <text x="178" y="176" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#4338CA" text-anchor="middle">Frontend</text>
+  <text x="178" y="194" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#6B7280" text-anchor="middle">Next.js 14 + React</text>
+  <text x="178" y="210" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#6B7280" text-anchor="middle">Tailwind CSS + shadcn/ui</text>
+  <!-- Edit icon -->
+  <rect x="240" y="156" width="22" height="22" rx="4" fill="#818CF830"/>
+  <text x="251" y="171" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#4338CA" text-anchor="middle">&#9998;</text>
+
+  <!-- API Gateway box -->
+  <rect x="88" y="252" width="180" height="56" rx="8" fill="#FFF7ED" stroke="#FB923C" stroke-width="1.5"/>
+  <text x="178" y="276" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#C2410C" text-anchor="middle">API Gateway</text>
+  <text x="178" y="294" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#6B7280" text-anchor="middle">nginx reverse proxy</text>
+  <rect x="240" y="256" width="22" height="22" rx="4" fill="#FB923C30"/>
+  <text x="251" y="271" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#C2410C" text-anchor="middle">&#9998;</text>
+
+  <!-- Arrow Frontend -> API -->
+  <line x1="178" y1="232" x2="178" y2="252" stroke="#D1D5DB" stroke-width="1.5" marker-end="url(#arrowDown)"/>
+  <text x="190" y="246" font-family="'Segoe UI',Arial,sans-serif" font-size="9" fill="#9CA3AF">REST</text>
+
+  <!-- Backend box -->
+  <rect x="310" y="152" width="200" height="156" rx="8" fill="#F0FDF4" stroke="#4ADE80" stroke-width="1.5"/>
+  <text x="410" y="176" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#166534" text-anchor="middle">Backend API</text>
+  <text x="410" y="194" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#6B7280" text-anchor="middle">Node.js + Express</text>
+  <text x="410" y="212" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#6B7280" text-anchor="middle">TypeScript</text>
+  <rect x="482" y="156" width="22" height="22" rx="4" fill="#4ADE8030"/>
+  <text x="493" y="171" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#166534" text-anchor="middle">&#9998;</text>
+
+  <!-- Services list inside backend -->
+  <rect x="320" y="226" width="180" height="72" rx="6" fill="#ffffff80"/>
+  <text x="336" y="244" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#047857">&#9679; Auth Service (JWT)</text>
+  <text x="336" y="260" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#047857">&#9679; Team Management</text>
+  <text x="336" y="276" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#047857">&#9679; Task Engine</text>
+  <text x="336" y="292" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#047857">&#9679; Notification Worker</text>
+
+  <!-- Arrow API -> Backend -->
+  <line x1="268" y1="280" x2="310" y2="230" stroke="#D1D5DB" stroke-width="1.5"/>
+
+  <!-- Database box -->
+  <rect x="556" y="152" width="160" height="80" rx="8" fill="#FDF2F8" stroke="#EC4899" stroke-width="1.5"/>
+  <text x="636" y="176" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#9D174D" text-anchor="middle">Datenbank</text>
+  <text x="636" y="194" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#6B7280" text-anchor="middle">PostgreSQL 16</text>
+  <text x="636" y="210" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#6B7280" text-anchor="middle">Prisma ORM</text>
+  <rect x="688" y="156" width="22" height="22" rx="4" fill="#EC489930"/>
+  <text x="699" y="171" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#9D174D" text-anchor="middle">&#9998;</text>
+
+  <!-- Arrow Backend -> DB -->
+  <line x1="510" y1="192" x2="556" y2="192" stroke="#D1D5DB" stroke-width="1.5"/>
+
+  <!-- Cache box -->
+  <rect x="556" y="252" width="160" height="56" rx="8" fill="#FEF3C7" stroke="#F59E0B" stroke-width="1.5"/>
+  <text x="636" y="276" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#92400E" text-anchor="middle">Cache / Queue</text>
+  <text x="636" y="294" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#6B7280" text-anchor="middle">Redis 7</text>
+  <rect x="688" y="256" width="22" height="22" rx="4" fill="#F59E0B30"/>
+  <text x="699" y="271" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#92400E" text-anchor="middle">&#9998;</text>
+
+  <!-- Arrow Backend -> Cache -->
+  <line x1="510" y1="260" x2="556" y2="275" stroke="#D1D5DB" stroke-width="1.5"/>
+
+  <!-- Email service box -->
+  <rect x="756" y="152" width="136" height="80" rx="8" fill="#F5F3FF" stroke="#8B5CF6" stroke-width="1.5"/>
+  <text x="824" y="176" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#6D28D9" text-anchor="middle">E-Mail</text>
+  <text x="824" y="194" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#6B7280" text-anchor="middle">SMTP / Resend</text>
+  <text x="824" y="210" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#6B7280" text-anchor="middle">Templates</text>
+  <rect x="864" y="156" width="22" height="22" rx="4" fill="#8B5CF630"/>
+  <text x="875" y="171" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#6D28D9" text-anchor="middle">&#9998;</text>
+
+  <!-- Docker Container outline -->
+  <rect x="76" y="328" width="836" height="28" rx="6" fill="#0F111710"/>
+  <text x="494" y="347" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#6B7280" text-anchor="middle">Docker Compose  &#183;  Alle Services containerisiert  &#183;  dev / prod profiles</text>
+
+  <!-- Arrow Backend -> Email -->
+  <line x1="636" y1="232" x2="756" y2="192" stroke="#D1D5DB" stroke-width="1.5"/>
+
+  <!-- ── Editable Details Section ── -->
+  <rect x="64" y="370" width="840" height="1" fill="#E2E4E9"/>
+
+  <text x="64" y="398" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#1C1B2E">Architecture.md Vorschau</text>
+  <rect x="228" y="384" width="66" height="20" rx="4" fill="#F0FDF4" stroke="#BBF7D0" stroke-width="1"/>
+  <text x="261" y="398" font-family="'Segoe UI',Arial,sans-serif" font-size="9" fill="#047857" text-anchor="middle">editierbar</text>
+
+  <!-- Markdown preview area -->
+  <rect x="64" y="410" width="840" height="190" rx="8" fill="#0F1117"/>
+
+  <!-- Line numbers gutter -->
+  <rect x="64" y="410" width="36" height="190" rx="8 0 0 8" fill="#161B22"/>
+
+  <text x="88" y="432" font-family="Consolas,monospace" font-size="9" fill="#484F58" text-anchor="end">1</text>
+  <text x="88" y="446" font-family="Consolas,monospace" font-size="9" fill="#484F58" text-anchor="end">2</text>
+  <text x="88" y="460" font-family="Consolas,monospace" font-size="9" fill="#484F58" text-anchor="end">3</text>
+  <text x="88" y="474" font-family="Consolas,monospace" font-size="9" fill="#484F58" text-anchor="end">4</text>
+  <text x="88" y="488" font-family="Consolas,monospace" font-size="9" fill="#484F58" text-anchor="end">5</text>
+  <text x="88" y="502" font-family="Consolas,monospace" font-size="9" fill="#484F58" text-anchor="end">6</text>
+  <text x="88" y="516" font-family="Consolas,monospace" font-size="9" fill="#484F58" text-anchor="end">7</text>
+  <text x="88" y="530" font-family="Consolas,monospace" font-size="9" fill="#484F58" text-anchor="end">8</text>
+  <text x="88" y="544" font-family="Consolas,monospace" font-size="9" fill="#484F58" text-anchor="end">9</text>
+  <text x="88" y="558" font-family="Consolas,monospace" font-size="9" fill="#484F58" text-anchor="end">10</text>
+  <text x="88" y="572" font-family="Consolas,monospace" font-size="9" fill="#484F58" text-anchor="end">11</text>
+  <text x="88" y="586" font-family="Consolas,monospace" font-size="9" fill="#484F58" text-anchor="end">12</text>
+
+  <!-- Code content -->
+  <text x="104" y="432" font-family="Consolas,monospace" font-size="10" fill="#E6EDF3"># Architecture: team-management-saas</text>
+  <text x="104" y="446" font-family="Consolas,monospace" font-size="10" fill="#8B949E"/>
+  <text x="104" y="460" font-family="Consolas,monospace" font-size="10" fill="#E6EDF3">## Overview</text>
+  <text x="104" y="474" font-family="Consolas,monospace" font-size="10" fill="#8B949E">SaaS platform for team management with task tracking,</text>
+  <text x="104" y="488" font-family="Consolas,monospace" font-size="10" fill="#8B949E">dashboards, e-mail notifications and REST API integration.</text>
+  <text x="104" y="502" font-family="Consolas,monospace" font-size="10" fill="#8B949E"/>
+  <text x="104" y="516" font-family="Consolas,monospace" font-size="10" fill="#E6EDF3">## Tech Stack</text>
+  <text x="104" y="530" font-family="Consolas,monospace" font-size="10" fill="#7EE787">| Layer      | Technology          | Purpose              |</text>
+  <text x="104" y="544" font-family="Consolas,monospace" font-size="10" fill="#7EE787">|------------|---------------------|----------------------|</text>
+  <text x="104" y="558" font-family="Consolas,monospace" font-size="10" fill="#7EE787">| Frontend   | Next.js 14 + React  | SSR + Dashboard UI   |</text>
+  <text x="104" y="572" font-family="Consolas,monospace" font-size="10" fill="#7EE787">| Backend    | Node.js + Express   | REST API + Services  |</text>
+  <text x="104" y="586" font-family="Consolas,monospace" font-size="10" fill="#7EE787">| Database   | PostgreSQL 16       | Primary datastore    |</text>
+
+  <!-- Navigation -->
+  <rect x="64" y="620" width="98" height="36" rx="8" fill="#ffffff" stroke="#E2E4E9" stroke-width="1.5"/>
+  <text x="113" y="642" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#374151" text-anchor="middle">&#8592; Projekt</text>
+
+  <rect x="772" y="620" width="132" height="36" rx="8" fill="url(#btnGrad)"/>
+  <text x="838" y="642" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="white" text-anchor="middle" font-weight="600">Docker Setup &#8250;</text>
+
+  <!-- Bottom accent -->
+  <rect x="0" y="694" width="960" height="6" fill="url(#btnGrad)"/>
+</svg>

@@ -1,0 +1,204 @@
+<svg width="960" height="760" viewBox="0 0 960 760" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="headerGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#13111A"/>
+      <stop offset="100%" stop-color="#1E1B30"/>
+    </linearGradient>
+    <linearGradient id="btnGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#5B5EF4"/>
+      <stop offset="100%" stop-color="#7C3AED"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="960" height="760" fill="#F0F2F5"/>
+
+  <!-- Header -->
+  <rect width="960" height="52" fill="url(#headerGrad)"/>
+  <rect x="16" y="13" width="26" height="26" rx="7" fill="#5B5EF4"/>
+  <text x="29" y="30" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="800" fill="white" text-anchor="middle">S2</text>
+  <text x="50" y="33" font-family="'Segoe UI',Arial,sans-serif" font-size="16" font-weight="700" fill="white">Spec-2-Start</text>
+
+  <!-- Step bar -->
+  <rect x="240" y="14" width="520" height="24" rx="12" fill="#ffffff0D"/>
+  <text x="282" y="30" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#22D3A5" text-anchor="middle">&#10003; Projekt</text>
+  <text x="350" y="30" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#22D3A5" text-anchor="middle">&#10003; Architektur</text>
+  <text x="426" y="30" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#22D3A5" text-anchor="middle">&#10003; Docker</text>
+  <rect x="470" y="16" width="74" height="20" rx="10" fill="#5B5EF4"/>
+  <text x="507" y="30" font-family="'Segoe UI',Arial,sans-serif" font-size="10" font-weight="700" fill="white" text-anchor="middle">4 Agents</text>
+  <text x="590" y="30" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#6B7280" text-anchor="middle">5 Instructions</text>
+  <text x="690" y="30" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#6B7280" text-anchor="middle">6 Generate</text>
+
+  <rect x="790" y="15" width="154" height="22" rx="11" fill="#22D3A515"/>
+  <circle cx="806" cy="26" r="5" fill="#22D3A5"/>
+  <text x="818" y="30" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#22D3A5">user/my-project</text>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!--  MAIN CONTENT                                -->
+  <!-- ═══════════════════════════════════════════ -->
+  <rect x="40" y="68" width="880" height="668" rx="14" fill="#ffffff" stroke="#E2E4E9" stroke-width="1"/>
+
+  <text x="64" y="100" font-family="'Segoe UI',Arial,sans-serif" font-size="20" font-weight="700" fill="#1C1B2E">Agent Population</text>
+  <text x="64" y="118" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#6B7280">Definiere dein AI-Team. Jeder Agent hat eine klare Accountability. Editiere, loesche oder fuege hinzu.</text>
+
+  <!-- Agent count badge -->
+  <rect x="820" y="82" width="76" height="28" rx="6" fill="#EEEFFE"/>
+  <text x="858" y="100" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#5B5EF4" text-anchor="middle" font-weight="600">5 Agents</text>
+
+  <!-- ─── Agent 1: Orchestrator ─── -->
+  <rect x="64" y="136" width="420" height="118" rx="10" fill="#EEEFFE" stroke="#5B5EF4" stroke-width="1.5"/>
+
+  <rect x="80" y="152" width="44" height="44" rx="10" fill="#5B5EF4"/>
+  <text x="102" y="180" font-family="'Segoe UI',Arial,sans-serif" font-size="20" font-weight="800" fill="white" text-anchor="middle">O</text>
+
+  <text x="136" y="170" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#1C1B2E">Orchestrator</text>
+  <rect x="230" y="158" width="118" height="18" rx="4" fill="#EEF0FE" stroke="#5B5EF4" stroke-width="0.75"/>
+  <text x="289" y="171" font-family="'Segoe UI',Arial,sans-serif" font-size="9" font-weight="600" fill="#5B5EF4" text-anchor="middle">Project Coordinator</text>
+
+  <text x="136" y="188" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#6B7280">Koordiniert alle Agents, plant Tasks, delegiert Arbeit,</text>
+  <text x="136" y="202" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#6B7280">merge-Entscheidungen, Sprint-Planung.</text>
+
+  <rect x="136" y="214" width="56" height="18" rx="4" fill="#DBEAFE"/>
+  <text x="164" y="227" font-family="'Segoe UI',Arial,sans-serif" font-size="9" fill="#2563EB" text-anchor="middle">Planung</text>
+  <rect x="198" y="214" width="76" height="18" rx="4" fill="#DBEAFE"/>
+  <text x="236" y="227" font-family="'Segoe UI',Arial,sans-serif" font-size="9" fill="#2563EB" text-anchor="middle">Delegation</text>
+  <rect x="280" y="214" width="58" height="18" rx="4" fill="#DBEAFE"/>
+  <text x="309" y="227" font-family="'Segoe UI',Arial,sans-serif" font-size="9" fill="#2563EB" text-anchor="middle">Review</text>
+
+  <!-- Edit / Delete -->
+  <rect x="424" y="152" width="28" height="28" rx="6" fill="#EEEFFE"/>
+  <text x="438" y="170" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#5B5EF4" text-anchor="middle">&#9998;</text>
+  <rect x="456" y="152" width="28" height="28" rx="6" fill="#FEF2F2"/>
+  <text x="470" y="170" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#EF4444" text-anchor="middle">&#10005;</text>
+
+  <!-- ─── Agent 2: Frontend ─── -->
+  <rect x="64" y="262" width="420" height="118" rx="10" fill="#EEF2FF" stroke="#818CF8" stroke-width="1.5"/>
+
+  <rect x="80" y="278" width="44" height="44" rx="10" fill="#818CF8"/>
+  <text x="102" y="306" font-family="'Segoe UI',Arial,sans-serif" font-size="20" font-weight="800" fill="white" text-anchor="middle">F</text>
+
+  <text x="136" y="296" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#1C1B2E">Frontend Agent</text>
+  <rect x="243" y="284" width="96" height="18" rx="4" fill="#EEF2FF" stroke="#818CF8" stroke-width="0.75"/>
+  <text x="291" y="297" font-family="'Segoe UI',Arial,sans-serif" font-size="9" font-weight="600" fill="#4338CA" text-anchor="middle">UI/UX Developer</text>
+
+  <text x="136" y="314" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#6B7280">React/Next.js Komponenten, Seiten, Styling, Accessibility,</text>
+  <text x="136" y="328" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#6B7280">State Management, Client-Side Logic.</text>
+
+  <rect x="136" y="340" width="48" height="18" rx="4" fill="#E0E7FF"/>
+  <text x="160" y="353" font-family="'Segoe UI',Arial,sans-serif" font-size="9" fill="#4338CA" text-anchor="middle">React</text>
+  <rect x="190" y="340" width="58" height="18" rx="4" fill="#E0E7FF"/>
+  <text x="219" y="353" font-family="'Segoe UI',Arial,sans-serif" font-size="9" fill="#4338CA" text-anchor="middle">Styling</text>
+  <rect x="254" y="340" width="36" height="18" rx="4" fill="#E0E7FF"/>
+  <text x="272" y="353" font-family="'Segoe UI',Arial,sans-serif" font-size="9" fill="#4338CA" text-anchor="middle">A11y</text>
+
+  <rect x="424" y="278" width="28" height="28" rx="6" fill="#EEF2FF"/>
+  <text x="438" y="296" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#818CF8" text-anchor="middle">&#9998;</text>
+  <rect x="456" y="278" width="28" height="28" rx="6" fill="#FEF2F2"/>
+  <text x="470" y="296" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#EF4444" text-anchor="middle">&#10005;</text>
+
+  <!-- ─── Agent 3: Backend ─── -->
+  <rect x="500" y="136" width="396" height="118" rx="10" fill="#F0FDF4" stroke="#4ADE80" stroke-width="1.5"/>
+
+  <rect x="516" y="152" width="44" height="44" rx="10" fill="#22C55E"/>
+  <text x="538" y="180" font-family="'Segoe UI',Arial,sans-serif" font-size="20" font-weight="800" fill="white" text-anchor="middle">B</text>
+
+  <text x="572" y="170" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#1C1B2E">Backend Agent</text>
+  <rect x="672" y="158" width="104" height="18" rx="4" fill="#F0FDF4" stroke="#4ADE80" stroke-width="0.75"/>
+  <text x="724" y="171" font-family="'Segoe UI',Arial,sans-serif" font-size="9" font-weight="600" fill="#166534" text-anchor="middle">API &amp; Services Dev</text>
+
+  <text x="572" y="188" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#6B7280">REST API Endpoints, Business Logic, Authentication,</text>
+  <text x="572" y="202" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#6B7280">Middleware, Error Handling, Validierung.</text>
+
+  <rect x="572" y="214" width="36" height="18" rx="4" fill="#DCFCE7"/>
+  <text x="590" y="227" font-family="'Segoe UI',Arial,sans-serif" font-size="9" fill="#166534" text-anchor="middle">API</text>
+  <rect x="614" y="214" width="46" height="18" rx="4" fill="#DCFCE7"/>
+  <text x="637" y="227" font-family="'Segoe UI',Arial,sans-serif" font-size="9" fill="#166534" text-anchor="middle">Auth</text>
+  <rect x="666" y="214" width="56" height="18" rx="4" fill="#DCFCE7"/>
+  <text x="694" y="227" font-family="'Segoe UI',Arial,sans-serif" font-size="9" fill="#166534" text-anchor="middle">Logic</text>
+
+  <rect x="856" y="152" width="28" height="28" rx="6" fill="#F0FDF4"/>
+  <text x="870" y="170" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#22C55E" text-anchor="middle">&#9998;</text>
+
+  <!-- ─── Agent 4: Database & Data ─── -->
+  <rect x="500" y="262" width="396" height="118" rx="10" fill="#FDF2F8" stroke="#EC4899" stroke-width="1.5"/>
+
+  <rect x="516" y="278" width="44" height="44" rx="10" fill="#EC4899"/>
+  <text x="538" y="306" font-family="'Segoe UI',Arial,sans-serif" font-size="20" font-weight="800" fill="white" text-anchor="middle">D</text>
+
+  <text x="572" y="296" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#1C1B2E">Datenbank &amp; Daten</text>
+  <rect x="702" y="284" width="88" height="18" rx="4" fill="#FDF2F8" stroke="#EC4899" stroke-width="0.75"/>
+  <text x="746" y="297" font-family="'Segoe UI',Arial,sans-serif" font-size="9" font-weight="600" fill="#9D174D" text-anchor="middle">Data Engineer</text>
+
+  <text x="572" y="314" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#6B7280">Schema Design, Migrationen, Queries, Seeding,</text>
+  <text x="572" y="328" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#6B7280">Datenmodell, Performance Optimierung.</text>
+
+  <rect x="572" y="340" width="60" height="18" rx="4" fill="#FCE7F3"/>
+  <text x="602" y="353" font-family="'Segoe UI',Arial,sans-serif" font-size="9" fill="#9D174D" text-anchor="middle">Schema</text>
+  <rect x="638" y="340" width="70" height="18" rx="4" fill="#FCE7F3"/>
+  <text x="673" y="353" font-family="'Segoe UI',Arial,sans-serif" font-size="9" fill="#9D174D" text-anchor="middle">Migration</text>
+  <rect x="714" y="340" width="56" height="18" rx="4" fill="#FCE7F3"/>
+  <text x="742" y="353" font-family="'Segoe UI',Arial,sans-serif" font-size="9" fill="#9D174D" text-anchor="middle">Prisma</text>
+
+  <rect x="856" y="278" width="28" height="28" rx="6" fill="#FDF2F8"/>
+  <text x="870" y="296" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#EC4899" text-anchor="middle">&#9998;</text>
+
+  <!-- ─── Agent 5: Reviewer / Tester / QA ─── -->
+  <rect x="64" y="388" width="832" height="118" rx="10" fill="#FFFBEB" stroke="#F59E0B" stroke-width="1.5"/>
+
+  <rect x="80" y="404" width="44" height="44" rx="10" fill="#F59E0B"/>
+  <text x="102" y="432" font-family="'Segoe UI',Arial,sans-serif" font-size="20" font-weight="800" fill="white" text-anchor="middle">Q</text>
+
+  <text x="136" y="422" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#1C1B2E">Reviewer / Tester / QA</text>
+  <rect x="296" y="410" width="96" height="18" rx="4" fill="#FFFBEB" stroke="#F59E0B" stroke-width="0.75"/>
+  <text x="344" y="423" font-family="'Segoe UI',Arial,sans-serif" font-size="9" font-weight="600" fill="#92400E" text-anchor="middle">Quality Guardian</text>
+
+  <text x="136" y="442" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#6B7280">Code Reviews, Test-Strategie, Security Checks, OWASP Compliance, Performance Tests,</text>
+  <text x="136" y="456" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#6B7280">End-to-End Tests, Accessibility Audits, Documentation Reviews.</text>
+
+  <rect x="136" y="468" width="60" height="18" rx="4" fill="#FEF3C7"/>
+  <text x="166" y="481" font-family="'Segoe UI',Arial,sans-serif" font-size="9" fill="#92400E" text-anchor="middle">Testing</text>
+  <rect x="202" y="468" width="64" height="18" rx="4" fill="#FEF3C7"/>
+  <text x="234" y="481" font-family="'Segoe UI',Arial,sans-serif" font-size="9" fill="#92400E" text-anchor="middle">Security</text>
+  <rect x="272" y="468" width="58" height="18" rx="4" fill="#FEF3C7"/>
+  <text x="301" y="481" font-family="'Segoe UI',Arial,sans-serif" font-size="9" fill="#92400E" text-anchor="middle">OWASP</text>
+  <rect x="336" y="468" width="52" height="18" rx="4" fill="#FEF3C7"/>
+  <text x="362" y="481" font-family="'Segoe UI',Arial,sans-serif" font-size="9" fill="#92400E" text-anchor="middle">E2E</text>
+  <rect x="394" y="468" width="66" height="18" rx="4" fill="#FEF3C7"/>
+  <text x="427" y="481" font-family="'Segoe UI',Arial,sans-serif" font-size="9" fill="#92400E" text-anchor="middle">Coverage</text>
+
+  <rect x="844" y="404" width="28" height="28" rx="6" fill="#FFFBEB"/>
+  <text x="858" y="422" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#F59E0B" text-anchor="middle">&#9998;</text>
+  <rect x="844" y="436" width="28" height="28" rx="6" fill="#FEF2F2"/>
+  <text x="858" y="454" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#EF4444" text-anchor="middle">&#10005;</text>
+
+  <!-- Add custom agent -->
+  <rect x="64" y="518" width="832" height="46" rx="9" fill="#FAFAFA" stroke="#C4C6D4" stroke-width="1.5" stroke-dasharray="6 4"/>
+  <text x="480" y="546" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#5B5EF4" text-anchor="middle" font-weight="600">+  Custom Agent hinzufuegen</text>
+
+  <!-- Agent edit modal hint -->
+  <rect x="64" y="578" width="832" height="74" rx="10" fill="#F8F9FC" stroke="#E2E4E9" stroke-width="1"/>
+  <text x="84" y="600" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#374151">Jeder Agent erzeugt eine .agent.md Datei mit:</text>
+  <rect x="84" y="610" width="100" height="20" rx="4" fill="#EEEFFE"/>
+  <text x="134" y="624" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#5B5EF4" text-anchor="middle">Accountability</text>
+  <rect x="190" y="610" width="110" height="20" rx="4" fill="#EEEFFE"/>
+  <text x="245" y="624" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#5B5EF4" text-anchor="middle">Responsibilities</text>
+  <rect x="306" y="610" width="90" height="20" rx="4" fill="#EEEFFE"/>
+  <text x="351" y="624" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#5B5EF4" text-anchor="middle">Instructions</text>
+  <rect x="402" y="610" width="60" height="20" rx="4" fill="#EEEFFE"/>
+  <text x="432" y="624" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#5B5EF4" text-anchor="middle">Tools</text>
+  <rect x="468" y="610" width="74" height="20" rx="4" fill="#EEEFFE"/>
+  <text x="505" y="624" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#5B5EF4" text-anchor="middle">applyTo []</text>
+
+  <!-- Copilot instructions auto-hint -->
+  <rect x="600" y="600" width="288" height="32" rx="6" fill="#F0FDF4" stroke="#BBF7D0" stroke-width="1"/>
+  <text x="612" y="620" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#047857">AGENTS.md wird automatisch aus Population erzeugt</text>
+
+  <!-- Navigation -->
+  <rect x="64" y="664" width="96" height="36" rx="8" fill="#ffffff" stroke="#E2E4E9" stroke-width="1.5"/>
+  <text x="112" y="686" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#374151" text-anchor="middle">&#8592; Docker</text>
+
+  <rect x="772" y="664" width="132" height="36" rx="8" fill="url(#btnGrad)"/>
+  <text x="838" y="686" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="white" text-anchor="middle" font-weight="600">Instructions &#8250;</text>
+
+  <!-- Bottom accent -->
+  <rect x="0" y="754" width="960" height="6" fill="url(#btnGrad)"/>
+</svg>

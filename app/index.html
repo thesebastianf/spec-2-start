@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spec-2-Start — Repo Wizard</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js" integrity="sha512-XMVd28F1oH/O71fzwBnV7HucLxVwtxf26XV8P4wPk26EDxuGZ91N8bsOttmnomcCD3CS5ZMRL50H0GgOHvegtg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+  <!-- ═══ HEADER ═══ -->
+  <header class="header">
+    <div class="header-left">
+      <img src="logo.svg" alt="Spec-2-Start" class="logo">
+      <span class="brand">Spec-2-Start</span>
+      <span class="subbrand">/ New Repo Wizard</span>
+    </div>
+    <nav class="steps-nav" id="stepsNav"></nav>
+    <div class="header-right">
+      <div class="header-controls">
+        <select id="langSelect" class="header-select" onchange="setLang(this.value)">
+          <option value="de">DE</option>
+          <option value="en">EN</option>
+        </select>
+        <select id="themeSelect" class="header-select" onchange="setTheme(this.value)">
+          <option value="light">☀ Light</option>
+          <option value="dark">🌙 Dark</option>
+          <option value="teal">🌊 Teal</option>
+          <option value="retro">👾 Retro</option>
+        </select>
+      </div>
+      <div class="repo-badge hidden" id="repoBadge">
+        <span class="dot green"></span>
+        <span id="repoBadgeText"></span>
+      </div>
+    </div>
+  </header>
+
+  <!-- ═══ MAIN ═══ -->
+  <main class="main" id="mainContent">
+
+    <!-- ──── STEP 0: Repo Selection ──── -->
+    <section class="step" data-step="0">
+      <div class="hero">
+        <div class="hero-icon">&#128640;</div>
+        <div>
+          <h1 data-i18n="hero.title">Neues Repo einrichten</h1>
+          <p data-i18n="hero.desc">Dieser Wizard führt dich Schritt für Schritt durch die Erstellung deiner Repo-Standards.</p>
+        </div>
+      </div>
+      <div class="cards-row">
+        <div class="card">
+          <div class="card-header">
+            <div class="icon-circle dark">GH</div>
+            <div>
+              <h3>GitHub Repository</h3>
+              <p data-i18n="repo.gh.desc">Direkt in ein bestehendes Repo schreiben</p>
+            </div>
+          </div>
+          <label data-i18n="repo.gh.url">Repository URL oder Owner/Name
+            <input type="text" id="repoUrl" placeholder="https://github.com/user/repo-name">
+          </label>
+          <div class="row">
+            <label class="half">Branch
+              <select id="repoBranch"><option>main</option><option>develop</option></select>
+            </label>
+          </div>
+          <label>GitHub Token <span style="font-weight:400;color:var(--text-muted)">(PAT mit repo scope)</span>
+            <input type="password" id="ghToken" placeholder="ghp_xxxxxxxxxxxx">
+          </label>
+          <p class="token-hint"><span data-i18n="repo.token.hint">Benötigt für Push.</span> <a href="https://github.com/settings/tokens/new?scopes=repo&description=Spec-2-Start" target="_blank" rel="noopener" data-i18n="repo.token.create">Token erstellen ↗</a></p>
+          <button class="btn primary full" onclick="connectRepo()" data-i18n="repo.gh.connect">Repository verbinden</button>
+        </div>
+        <div class="or-divider"><span>OR</span></div>
+        <div class="card">
+          <div class="card-header">
+            <div class="icon-circle purple">+</div>
+            <div>
+              <h3 data-i18n="repo.new.title">Neues Repo erstellen</h3>
+              <p data-i18n="repo.new.desc">Leeres GitHub Repo anlegen und Standards einrichten</p>
+            </div>
+          </div>
+          <label>Repository Name
+            <input type="text" id="newRepoName" placeholder="my-awesome-project">
+          </label>
+          <div class="radio-row">
+            <label class="radio-card selected" onclick="selectVisibility(this,'public')">
+              <input type="radio" name="vis" value="public" checked> Public
+            </label>
+            <label class="radio-card" onclick="selectVisibility(this,'private')">
+              <input type="radio" name="vis" value="private"> Private
+            </label>
+          </div>
+          <label>GitHub Token <span style="font-weight:400;color:var(--text-muted)">(PAT mit repo scope)</span>
+            <input type="password" id="ghTokenNew" placeholder="ghp_xxxxxxxxxxxx">
+          </label>
+          <p class="token-hint"><span data-i18n="repo.token.hint2">Benötigt für Repo-Erstellung.</span> <a href="https://github.com/settings/tokens/new?scopes=repo&description=Spec-2-Start" target="_blank" rel="noopener" data-i18n="repo.token.create">Token erstellen ↗</a></p>
+          <button class="btn outline full" onclick="createNewRepo()" data-i18n="repo.new.btn">Repo erstellen &amp; starten</button>
+        </div>
+      </div>
+      <div class="local-option" onclick="startLocal()">
+        <span>📁</span>
+        <div>
+          <strong data-i18n="repo.local.title">Nur lokal generieren</strong>
+          <p data-i18n="repo.local.desc">Dateien als ZIP herunterladen, ohne GitHub-Anbindung</p>
+        </div>
+        <span class="chevron">›</span>
+      </div>
+      <div class="hint-bar warning">
+        <strong data-i18n="repo.hint.label">Tipp:</strong> <span data-i18n="repo.hint.text">Du kannst jederzeit zwischen den Schritten zurücknavigieren. Nichts wird geschrieben bis du im letzten Schritt bestätigt hast.</span>
+      </div>
+    </section>
+
+    <!-- ──── STEP 1: Project Description ──── -->
+    <section class="step hidden" data-step="1">
+      <div class="split">
+        <div class="split-main">
+          <h2 data-i18n="proj.title">Was baust du?</h2>
+          <p class="subtitle" data-i18n="proj.subtitle">Beschreibe dein Projekt in einfacher Sprache. Die KI erstellt daraus die technische Architektur.</p>
+          <textarea id="projectDesc" rows="8" data-i18n-placeholder="proj.placeholder" placeholder="Bitte beschreibe dein Projekt in einfacher Sprache..."></textarea>
+          <div class="char-count"><span id="charCount">0</span> / 2000</div>
+          <div class="section-label" data-i18n="proj.templates">SCHNELLSTART-VORLAGEN</div>
+          <div class="chip-row" id="templates">
+            <button class="chip active" onclick="selectTemplate(this,'saas')">SaaS App</button>
+            <button class="chip" onclick="selectTemplate(this,'cli')">CLI Tool</button>
+            <button class="chip" onclick="selectTemplate(this,'micro')">Microservices</button>
+            <button class="chip" onclick="selectTemplate(this,'api')">API only</button>
+            <button class="chip" onclick="selectTemplate(this,'mobile')">Mobile App</button>
+            <button class="chip" onclick="selectTemplate(this,'data')">Data Pipeline</button>
+          </div>
+          <hr>
+          <div class="row">
+            <label class="half" data-i18n="proj.name">Projektname
+              <input type="text" id="projectName" placeholder="my-project">
+            </label>
+            <label class="half" data-i18n="proj.lang">Primäre Sprache
+              <select id="projectLang">
+                <option>TypeScript / Node.js</option>
+                <option>Python</option>
+                <option>Go</option>
+                <option>Java / Spring</option>
+                <option>C# / .NET</option>
+                <option>Rust</option>
+              </select>
+            </label>
+          </div>
+          <div class="nav-row">
+            <button class="btn outline" onclick="goStep(0)">← Repo</button>
+            <button class="btn primary" onclick="goStep(2)" data-i18n="proj.analyze">Analysieren ›</button>
+          </div>
+        </div>
+        <div class="split-side">
+          <h4 data-i18n="proj.side.title">Was passiert als nächstes?</h4>
+            <div class="info-steps">
+            <div class="info-step"><span class="num">1</span> <span data-i18n="proj.side.s1">KI analysiert deine Beschreibung</span></div>
+            <div class="info-step"><span class="num">2</span> <span data-i18n="proj.side.s2">Erzeugt technische Architektur</span></div>
+            <div class="info-step"><span class="num">3</span> <span data-i18n="proj.side.s3">Schlägt Stack &amp; Services vor</span></div>
+            <div class="info-step"><span class="num">4</span> <span data-i18n="proj.side.s4">Du kannst alles anpassen</span></div>
+          </div>
+          <div class="section-label" data-i18n="proj.side.terms">ERKANNTE BEGRIFFE</div>
+          <div class="chip-row" id="detectedTerms"></div>
+          <hr>
+          <div class="section-label" data-i18n="proj.side.stack">VORAUSSICHTLICHER STACK</div>
+          <div id="suggestedStack" class="stack-preview"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ──── STEP 2: Technical Architecture ──── -->
+    <section class="step hidden" data-step="2">
+      <div class="step-header">
+        <div>
+          <h2 data-i18n="arch.title">Technische Architektur</h2>
+          <span class="badge purple" data-i18n="arch.badge">KI-generiert</span>
+        </div>
+        <button class="btn outline small" onclick="regenerateArch()" data-i18n="arch.regen">↻ Neu generieren</button>
+      </div>
+      <p class="subtitle" data-i18n="arch.subtitle">Basierend auf deiner Beschreibung. Klicke auf einen Block zum Ändern.</p>
+      <div class="section-label" data-i18n="arch.suggestions">SCHNELLAUSWAHL</div>
+      <div id="archSuggestions"></div>
+      <hr>
+      <div class="arch-diagram" id="archDiagram"></div>
+      <button class="btn dashed full" onclick="addArchBlock()" data-i18n="arch.addBlock">+ Block hinzufügen</button>
+      <hr>
+      <div class="step-header">
+        <h3 data-i18n="arch.preview">Architecture.md Vorschau</h3>
+        <span class="badge green" data-i18n="arch.editable">editierbar</span>
+      </div>
+      <div class="code-editor">
+        <textarea id="archMd" rows="12" class="code-textarea"></textarea>
+      </div>
+      <div class="nav-row">
+        <button class="btn outline" onclick="goStep(1)">← Projekt</button>
+        <button class="btn primary" onclick="goStep(3)">Docker Setup ›</button>
+      </div>
+    </section>
+
+    <!-- ──── STEP 3: Docker Config ──── -->
+    <section class="step hidden" data-step="3">
+      <div class="split">
+        <div class="split-main">
+          <h2 data-i18n="docker.title">Docker &amp; Environment</h2>
+          <p class="subtitle" data-i18n="docker.subtitle">Konfiguriere docker-compose Services und Environment-Variablen</p>
+          <div class="hint-bar orange">
+            <strong data-i18n="docker.rules.title">Standard-Regeln (automatisch angewendet)</strong>
+            <ul>
+              <li data-i18n="docker.rules.r1">docker-compose.yaml-example + .env-example = immer vollständig</li>
+              <li data-i18n="docker.rules.r2">Lokale Kopien via .gitignore geschützt</li>
+              <li data-i18n="docker.rules.r3">Clone-Skript erstellt lokale Dateien automatisch</li>
+            </ul>
+          </div>
+          <div class="section-label" data-i18n="docker.services">SERVICES</div>
+          <div id="servicesList"></div>
+          <button class="btn dashed full" onclick="addService()" data-i18n="docker.addService">+ Service hinzufügen</button>
+          <hr>
+          <div class="section-label" data-i18n="docker.envVars">.env-example Variablen</div>
+          <div class="code-editor">
+            <textarea id="envVars" rows="8" class="code-textarea"></textarea>
+          </div>
+          <hr>
+          <div class="section-label"><span data-i18n="docker.volumes">LOKALE VOLUME-PFADE</span> <span class="badge amber">.gitignore</span></div>
+          <p class="subtitle" style="margin-bottom:8px" data-i18n="docker.volumesDesc">Host-Pfade für Named Volumes (nur für lokale docker-compose.yaml)</p>
+          <div id="volumePathInputs"></div>
+          <div class="nav-row">
+            <button class="btn outline" onclick="goStep(2)">← Architektur</button>
+          </div>
+        </div>
+        <div class="split-side dark">
+          <div class="preview-header">
+            <span class="section-label light" data-i18n="docker.preview">LIVE VORSCHAU</span>
+          </div>
+          <div class="tabs-hint" data-i18n="tabs.hint">▼ Klicke die Tabs um verschiedene Dateien zu sehen</div>
+          <div class="preview-tabs">
+            <button class="tab active" onclick="switchDockerTab(this,'compose')" data-i18n="docker.tab.compose">compose-example</button>
+            <button class="tab" onclick="switchDockerTab(this,'env')">.env-example</button>
+            <button class="tab" onclick="switchDockerTab(this,'localCompose')">local compose</button>
+            <button class="tab" onclick="switchDockerTab(this,'localEnv')">local .env</button>
+            <button class="tab" onclick="switchDockerTab(this,'gitignore')">.gitignore</button>
+          </div>
+          <pre class="code-preview" id="dockerPreview"></pre>
+          <div class="preview-footer">
+            <button class="btn small outline light" onclick="copyPreview('dockerPreview',this)" data-i18n="btn.copy">Kopieren</button>
+            <button class="btn small primary" onclick="goStep(4)" data-i18n="docker.next">Agents konfigurieren ›</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ──── STEP 4: Agents ──── -->
+    <section class="step hidden" data-step="4">
+      <div class="step-header">
+        <div>
+          <h2>Agent Population</h2>
+          <p class="subtitle" data-i18n="agents.subtitle">Definiere dein AI-Team. Jeder Agent hat eine klare Accountability.</p>
+        </div>
+        <div class="badge purple" id="agentCount">5 Agents</div>
+      </div>
+      <div class="agents-grid" id="agentsGrid"></div>
+      <button class="btn dashed full" onclick="addAgent()" data-i18n="agents.add">+ Custom Agent hinzufügen</button>
+      <div class="info-bar">
+        <strong data-i18n="agents.info">Jeder Agent erzeugt eine .agent.md Datei</strong> <span data-i18n="agents.info2">mit: Accountability · Responsibilities · Instructions · Tools · applyTo</span>
+      </div>
+      <div class="nav-row">
+        <button class="btn outline" onclick="goStep(3)">← Docker</button>
+        <button class="btn primary" onclick="goStep(5)">Instructions ›</button>
+      </div>
+    </section>
+
+    <!-- ──── STEP 5: Instructions ──── -->
+    <section class="step hidden" data-step="5">
+      <div class="split">
+        <div class="split-main">
+          <h2 data-i18n="instr.title">Projekt-Instructions</h2>
+          <p class="subtitle" data-i18n="instr.subtitle">Regeln die IMMER gelten. Werden in copilot-instructions.md geschrieben.</p>
+          <div id="instructionsList"></div>
+          <button class="btn dashed full" onclick="addInstruction()" data-i18n="instr.add">+ Neue Instruction hinzufügen</button>
+          <hr>
+          <label data-i18n="instr.free">Zusätzliche Freitext-Instructions
+            <textarea id="freeInstructions" rows="4" data-i18n-placeholder="instr.freePh" placeholder="Schreibe hier weitere Regeln die immer gelten sollen..."></textarea>
+          </label>
+          <div class="nav-row">
+            <button class="btn outline" onclick="goStep(4)">← Agents</button>
+          </div>
+        </div>
+        <div class="split-side dark">
+          <div class="preview-header">
+            <div class="tabs-hint" data-i18n="tabs.hint">▼ Klicke die Tabs um verschiedene Dateien zu sehen</div>
+            <div class="preview-tabs">
+              <button class="tab active" onclick="switchInstrTab(this,'copilot')">copilot-instructions.md</button>
+              <button class="tab" onclick="switchInstrTab(this,'agents')">AGENTS.md</button>
+            </div>
+          </div>
+          <pre class="code-preview" id="instructionsPreview"></pre>
+          <div class="preview-footer">
+            <button class="btn small outline light" onclick="copyPreview('instructionsPreview',this)" data-i18n="btn.copy">Kopieren</button>
+            <button class="btn small primary" onclick="goStep(6)" data-i18n="instr.next">MCP Servers ›</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ──── STEP 6: MCP Servers ──── -->
+    <section class="step hidden" data-step="6">
+      <div class="step-header">
+        <div>
+          <h2 data-i18n="mcp.title">MCP Servers</h2>
+          <p class="subtitle" data-i18n="mcp.subtitle">Konfiguriere Model Context Protocol Server für dein Projekt. Diese werden in .vscode/mcp.json gespeichert.</p>
+        </div>
+        <div class="badge purple" id="mcpCount">0 MCPs</div>
+      </div>
+      <div class="hint-bar orange">
+        <strong data-i18n="mcp.hint.title">Was sind MCP Server?</strong>
+        <p style="margin-top:4px" data-i18n="mcp.hint.desc">MCP Server erweitern Copilot/AI mit zusätzlichen Tools — z.B. shadcn/ui Komponenten, Datenbank-Zugriff, API-Dokumentation oder Design-Systeme.</p>
+      </div>
+      <div class="section-label" data-i18n="mcp.popular">BELIEBTE MCP SERVER</div>
+      <div id="mcpSuggestions"></div>
+      <hr>
+      <div class="section-label" data-i18n="mcp.active">AKTIVE MCP SERVER</div>
+      <div id="mcpList"></div>
+      <button class="btn dashed full" onclick="addMcp()" data-i18n="mcp.add">+ MCP Server hinzufügen</button>
+      <div class="nav-row">
+        <button class="btn outline" onclick="goStep(5)">← Instructions</button>
+        <button class="btn primary" onclick="goStep(7)" data-i18n="mcp.next">Review &amp; Generate ›</button>
+      </div>
+    </section>
+
+    <!-- ──── STEP 7: Review & Generate ──── -->
+    <section class="step hidden" data-step="7">
+      <div class="split">
+        <div class="split-main">
+          <h2 data-i18n="review.title">Review &amp; Generieren</h2>
+          <p class="subtitle" data-i18n="review.subtitle">Prüfe alle generierten Dateien bevor sie ins Repo geschrieben werden.</p>
+          <div class="summary-cards">
+            <div class="summary-card purple"><span class="big" id="totalFiles">12</span><span data-i18n="review.files">Dateien</span></div>
+            <div class="summary-card green"><span class="big" id="totalAgents">5</span>Agents</div>
+            <div class="summary-card amber"><span class="big" id="totalInstructions">4</span>Instructions</div>
+          </div>
+          <div class="section-label" data-i18n="review.tree">DATEIBAUM</div>
+          <div class="file-tree" id="fileTree"></div>
+          <hr>
+          <div class="section-label" data-i18n="review.target">ZIEL</div>
+          <div class="target-info" id="targetInfo"></div>
+          <div id="pushStatus" class="push-status hidden"></div>
+          <div class="nav-row">
+            <button class="btn outline" onclick="goStep(6)">← MCP</button>
+            <button class="btn success big" id="pushBtn" onclick="pushToRepo()">&#128640; Push to GitHub</button>
+            <button class="btn green big" onclick="downloadZip()">⬇ Download .zip</button>
+          </div>
+        </div>
+        <div class="split-side dark">
+          <div class="preview-header">
+            <span class="section-label light" data-i18n="review.preview">DATEI-VORSCHAU</span>
+          </div>
+          <div class="tabs-hint" data-i18n="tabs.hint">▼ Klicke die Tabs um verschiedene Dateien zu sehen</div>
+          <div class="preview-tabs" id="finalPreviewTabs"></div>
+          <pre class="code-preview" id="finalPreview"></pre>
+          <div class="preview-footer">
+            <button class="btn small outline light" onclick="copyPreview('finalPreview',this)" data-i18n="btn.copy">Kopieren</button>
+            <button class="btn small green" onclick="downloadZip()" data-i18n="review.dlSmall">↓ Download .zip</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ═══ BOTTOM ACCENT ═══ -->
+  <div class="bottom-accent"></div>
+  <footer class="site-footer">
+    Created by <a href="https://github.com/thesebastianf" target="_blank" rel="noopener">Sebastian</a>
+  </footer>
+
+  <!-- ═══ MODAL: Edit Agent ═══ -->
+  <div class="modal-overlay hidden" id="agentModal">
+    <div class="modal">
+      <div class="modal-header">
+        <h3 id="agentModalTitle" data-i18n="modal.agent.title">Agent bearbeiten</h3>
+        <button class="modal-close" onclick="closeAgentModal()">×</button>
+      </div>
+      <label>Name <input type="text" id="agentEditName"></label>
+      <label>Role / Accountability <input type="text" id="agentEditRole"></label>
+      <label data-i18n="modal.agent.desc">Beschreibung <textarea id="agentEditDesc" rows="3"></textarea></label>
+      <label>Responsibilities (eine pro Zeile) <textarea id="agentEditResp" rows="5"></textarea></label>
+      <label>Instructions <textarea id="agentEditInstr" rows="5"></textarea></label>
+      <label>applyTo Patterns (eine pro Zeile) <textarea id="agentEditApply" rows="3"></textarea></label>
+      <div class="modal-actions">
+        <button class="btn outline" onclick="closeAgentModal()" data-i18n="btn.cancel">Abbrechen</button>
+        <button class="btn primary" onclick="saveAgent()" data-i18n="btn.save">Speichern</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ MODAL: Edit Architecture Block ═══ -->
+  <div class="modal-overlay hidden" id="archModal">
+    <div class="modal">
+      <div class="modal-header">
+        <h3 id="archModalTitle" data-i18n="modal.arch.title">Block bearbeiten</h3>
+        <button class="modal-close" onclick="closeArchModal()">×</button>
+      </div>
+      <label data-i18n="modal.arch.layer">Layer / Titel <input type="text" id="archEditTitle"></label>
+      <label data-i18n="modal.arch.tech">Technologie <input type="text" id="archEditTech"></label>
+      <label data-i18n="modal.arch.detail">Details <input type="text" id="archEditDetail"></label>
+      <div class="modal-actions">
+        <button class="btn outline" onclick="closeArchModal()" data-i18n="btn.cancel">Abbrechen</button>
+        <button class="btn danger" onclick="deleteArchBlock()" id="archDeleteBtn" data-i18n="btn.delete">Löschen</button>
+        <button class="btn primary" onclick="saveArchBlock()" data-i18n="btn.save">Speichern</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ MODAL: Edit Instruction ═══ -->
+  <div class="modal-overlay hidden" id="instrModal">
+    <div class="modal">
+      <div class="modal-header">
+        <h3 id="instrModalTitle" data-i18n="modal.instr.title">Instruction bearbeiten</h3>
+        <button class="modal-close" onclick="closeInstrModal()">×</button>
+      </div>
+      <label data-i18n="modal.instr.titleLabel">Titel <input type="text" id="instrEditTitle"></label>
+      <label data-i18n="modal.instr.desc">Beschreibung <textarea id="instrEditDesc" rows="4"></textarea></label>
+      <div class="modal-actions">
+        <button class="btn outline" onclick="closeInstrModal()" data-i18n="btn.cancel">Abbrechen</button>
+        <button class="btn primary" onclick="saveInstruction()" data-i18n="btn.save">Speichern</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ MODAL: Add MCP Server ═══ -->
+  <div class="modal-overlay hidden" id="mcpModal">
+    <div class="modal">
+      <div class="modal-header">
+        <h3 id="mcpModalTitle" data-i18n="modal.mcp.title">MCP Server hinzufügen</h3>
+        <button class="modal-close" onclick="closeMcpModal()">×</button>
+      </div>
+      <label data-i18n="modal.mcp.name">Name <input type="text" id="mcpEditName" placeholder="z.B. My Custom MCP"></label>
+      <label data-i18n="modal.mcp.command">Befehl <input type="text" id="mcpEditCommand" placeholder="npx -y @scope/mcp-server"></label>
+      <label data-i18n="modal.mcp.desc">Beschreibung (optional) <textarea id="mcpEditDesc" rows="2"></textarea></label>
+      <div class="modal-actions">
+        <button class="btn outline" onclick="closeMcpModal()" data-i18n="btn.cancel">Abbrechen</button>
+        <button class="btn primary" onclick="saveMcp()" data-i18n="btn.save">Speichern</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

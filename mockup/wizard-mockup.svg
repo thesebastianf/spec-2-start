@@ -1,0 +1,326 @@
+<svg width="960" height="640" viewBox="0 0 960 640" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="headerGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#13111A"/>
+      <stop offset="100%" stop-color="#1E1B30"/>
+    </linearGradient>
+    <linearGradient id="btnGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#5B5EF4"/>
+      <stop offset="100%" stop-color="#7C3AED"/>
+    </linearGradient>
+    <linearGradient id="fadeCode" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="50%" stop-color="#0F1117" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#0F1117" stop-opacity="1"/>
+    </linearGradient>
+    <clipPath id="codeClip">
+      <rect x="740" y="118" width="220" height="452"/>
+    </clipPath>
+  </defs>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!--  BACKGROUND                                  -->
+  <!-- ═══════════════════════════════════════════ -->
+  <rect width="960" height="640" fill="#F0F2F5"/>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!--  HEADER                                      -->
+  <!-- ═══════════════════════════════════════════ -->
+  <rect width="960" height="52" fill="url(#headerGrad)"/>
+
+  <!-- Logo pill -->
+  <rect x="16" y="13" width="26" height="26" rx="7" fill="#5B5EF4"/>
+  <text x="29" y="30" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="800" fill="white" text-anchor="middle">S2</text>
+  <text x="50" y="33" font-family="'Segoe UI',Arial,sans-serif" font-size="16" font-weight="700" fill="white" letter-spacing="-0.3">Spec-2-Start</text>
+  <text x="183" y="33" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#5B5EF4">/ New Repo Wizard</text>
+
+  <!-- Step 1 — done -->
+  <rect x="290" y="15" width="84" height="22" rx="11" fill="#22D3A5" fill-opacity="0.25"/>
+  <circle cx="306" cy="26" r="8" fill="#22D3A5"/>
+  <text x="306" y="30" font-family="'Segoe UI',Arial,sans-serif" font-size="10" font-weight="700" fill="white" text-anchor="middle">&#10003;</text>
+  <text x="322" y="30" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="600" fill="#22D3A5">Project</text>
+  <text x="381" y="31" font-family="'Segoe UI',Arial,sans-serif" font-size="15" fill="#4B5563">&#8250;</text>
+
+  <!-- Step 2 — done -->
+  <rect x="392" y="15" width="80" height="22" rx="11" fill="#22D3A5" fill-opacity="0.25"/>
+  <circle cx="408" cy="26" r="8" fill="#22D3A5"/>
+  <text x="408" y="30" font-family="'Segoe UI',Arial,sans-serif" font-size="10" font-weight="700" fill="white" text-anchor="middle">&#10003;</text>
+  <text x="424" y="30" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="600" fill="#22D3A5">Docker</text>
+  <text x="479" y="31" font-family="'Segoe UI',Arial,sans-serif" font-size="15" fill="#4B5563">&#8250;</text>
+
+  <!-- Step 3 — active -->
+  <rect x="490" y="15" width="76" height="22" rx="11" fill="#5B5EF4"/>
+  <text x="528" y="30" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="white" text-anchor="middle">3  Agents</text>
+  <text x="573" y="31" font-family="'Segoe UI',Arial,sans-serif" font-size="15" fill="#4B5563">&#8250;</text>
+
+  <!-- Step 4 — pending -->
+  <rect x="584" y="15" width="92" height="22" rx="11" fill="#ffffff" fill-opacity="0.07"/>
+  <text x="630" y="30" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#6B7280" text-anchor="middle">4  Templates</text>
+  <text x="683" y="31" font-family="'Segoe UI',Arial,sans-serif" font-size="15" fill="#4B5563">&#8250;</text>
+
+  <!-- Step 5 — pending -->
+  <rect x="694" y="15" width="88" height="22" rx="11" fill="#ffffff" fill-opacity="0.07"/>
+  <text x="738" y="30" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#6B7280" text-anchor="middle">5  Generate</text>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!--  LEFT SIDEBAR                               -->
+  <!-- ═══════════════════════════════════════════ -->
+  <rect x="0" y="52" width="218" height="588" fill="#ffffff"/>
+  <rect x="218" y="52" width="1" height="588" fill="#E2E4E9"/>
+
+  <!-- Sidebar: progress label -->
+  <text x="18" y="80" font-family="'Segoe UI',Arial,sans-serif" font-size="10" font-weight="600" letter-spacing="0.7" fill="#9CA3AF">FORTSCHRITT</text>
+
+  <!-- Step 1 connector + node -->
+  <line x1="36" y1="110" x2="36" y2="136" stroke="#22D3A5" stroke-width="2" stroke-dasharray="3 3"/>
+  <circle cx="36" cy="100" r="12" fill="#22D3A5"/>
+  <text x="36" y="104" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="white" text-anchor="middle">&#10003;</text>
+  <text x="56" y="97" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#374151">Project Info</text>
+  <text x="56" y="112" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#9CA3AF">my-awesome-api  &#183;  Node.js</text>
+
+  <!-- Step 2 connector + node -->
+  <line x1="36" y1="148" x2="36" y2="174" stroke="#22D3A5" stroke-width="2" stroke-dasharray="3 3"/>
+  <circle cx="36" cy="140" r="12" fill="#22D3A5"/>
+  <text x="36" y="144" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="white" text-anchor="middle">&#10003;</text>
+  <text x="56" y="137" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#374151">Docker Config</text>
+  <text x="56" y="152" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#9CA3AF">postgres  &#183;  redis  &#183;  nginx</text>
+
+  <!-- Step 3 connector + node (ACTIVE) -->
+  <line x1="36" y1="190" x2="36" y2="220" stroke="#E2E4E9" stroke-width="2" stroke-dasharray="3 3"/>
+  <circle cx="36" cy="180" r="12" fill="#5B5EF4"/>
+  <text x="36" y="184" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="white" text-anchor="middle">3</text>
+  <text x="56" y="177" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="700" fill="#1C1B2E">Agents &amp; AI</text>
+  <text x="56" y="192" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#5B5EF4">2 von 3 ausgewaehlt</text>
+
+  <!-- Step 4 connector + node -->
+  <line x1="36" y1="230" x2="36" y2="256" stroke="#E2E4E9" stroke-width="2" stroke-dasharray="3 3"/>
+  <circle cx="36" cy="222" r="12" fill="#F4F5F7" stroke="#E2E4E9" stroke-width="1.5"/>
+  <text x="36" y="226" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#9CA3AF" text-anchor="middle">4</text>
+  <text x="56" y="226" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#9CA3AF">Templates</text>
+
+  <!-- Step 5 node -->
+  <circle cx="36" cy="262" r="12" fill="#F4F5F7" stroke="#E2E4E9" stroke-width="1.5"/>
+  <text x="36" y="266" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#9CA3AF" text-anchor="middle">5</text>
+  <text x="56" y="266" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#9CA3AF">Generate &amp; Export</text>
+
+  <!-- Sidebar divider -->
+  <rect x="16" y="288" width="186" height="1" fill="#E2E4E9"/>
+
+  <!-- Generated files section -->
+  <text x="18" y="306" font-family="'Segoe UI',Arial,sans-serif" font-size="10" font-weight="600" letter-spacing="0.7" fill="#9CA3AF">DATEIEN (BISHER)</text>
+
+  <!-- Green dot = generated; blue = in progress; gray = pending -->
+  <rect x="18" y="316" width="8" height="8" rx="2" fill="#22D3A5"/>
+  <text x="32" y="324" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#374151">docker-compose.yml</text>
+
+  <rect x="18" y="332" width="8" height="8" rx="2" fill="#22D3A5"/>
+  <text x="32" y="340" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#374151">docker-compose.dev.yml</text>
+
+  <rect x="18" y="348" width="8" height="8" rx="2" fill="#22D3A5"/>
+  <text x="32" y="356" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#374151">docker-compose.prod.yml</text>
+
+  <rect x="18" y="364" width="8" height="8" rx="2" fill="#5B5EF4"/>
+  <text x="32" y="372" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#374151">architect.agent.md</text>
+
+  <rect x="18" y="380" width="8" height="8" rx="2" fill="#5B5EF4"/>
+  <text x="32" y="388" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#374151">code-review.agent.md</text>
+
+  <rect x="18" y="396" width="8" height="8" rx="2" fill="#E2E4E9"/>
+  <text x="32" y="404" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#9CA3AF">copilot-instructions.md</text>
+  <text x="198" y="404" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#9CA3AF" text-anchor="end">bald</text>
+
+  <rect x="18" y="412" width="8" height="8" rx="2" fill="#E2E4E9"/>
+  <text x="32" y="420" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#9CA3AF">README.md</text>
+  <text x="198" y="420" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#9CA3AF" text-anchor="end">bald</text>
+
+  <rect x="16" y="436" width="186" height="1" fill="#E2E4E9"/>
+  <text x="18" y="454" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#6B7280">Gesamt: <tspan fill="#5B5EF4" font-weight="700">7 Dateien</tspan> geplant</text>
+
+  <!-- Reset button -->
+  <rect x="16" y="600" width="186" height="30" rx="7" fill="#FEF2F2" stroke="#FECACA" stroke-width="1"/>
+  <text x="109" y="619" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#EF4444" text-anchor="middle" font-weight="500">&#10005;  Neu starten</text>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!--  MAIN CONTENT AREA                          -->
+  <!-- ═══════════════════════════════════════════ -->
+  <rect x="219" y="52" width="521" height="588" fill="#F0F2F5"/>
+
+  <!-- Main white card (with subtle shadow via offset rect) -->
+  <rect x="243" y="72" width="479" height="556" rx="12" fill="#0000001A"/>
+  <rect x="241" y="70" width="479" height="556" rx="12" fill="#ffffff"/>
+
+  <!-- Card heading -->
+  <text x="265" y="104" font-family="'Segoe UI',Arial,sans-serif" font-size="18" font-weight="700" fill="#1C1B2E">Agent Konfiguration</text>
+  <text x="265" y="122" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#6B7280">Definiere welche AI Agents aktiv sind und wer accountable ist</text>
+  <rect x="265" y="132" width="433" height="1" fill="#E2E4E9"/>
+
+  <!-- ─────────────────────────────────────────── -->
+  <!--  AGENT CARD 1: Architect (SELECTED)         -->
+  <!-- ─────────────────────────────────────────── -->
+  <rect x="265" y="142" width="433" height="94" rx="9" fill="#EEEFFE" stroke="#5B5EF4" stroke-width="1.5"/>
+
+  <!-- Icon -->
+  <rect x="281" y="158" width="40" height="40" rx="9" fill="#5B5EF4"/>
+  <text x="301" y="183" font-family="'Segoe UI',Arial,sans-serif" font-size="17" font-weight="800" fill="white" text-anchor="middle">A</text>
+
+  <!-- Name + scope badge -->
+  <text x="333" y="174" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#1C1B2E">Architect Agent</text>
+  <rect x="428" y="162" width="96" height="16" rx="4" fill="#EEF0FE" stroke="#5B5EF4" stroke-width="0.75"/>
+  <text x="476" y="174" font-family="'Segoe UI',Arial,sans-serif" font-size="9" font-weight="600" fill="#5B5EF4" text-anchor="middle">Tech Lead  Scope</text>
+
+  <!-- Toggle ON -->
+  <rect x="653" y="162" width="37" height="20" rx="10" fill="#5B5EF4"/>
+  <circle cx="680" cy="172" r="8" fill="white"/>
+
+  <!-- Description -->
+  <text x="333" y="191" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#6B7280">Systemdesign, ADRs, API Contracts, Architektur-Entscheidungen</text>
+
+  <!-- Tags -->
+  <rect x="333" y="202" width="54" height="16" rx="4" fill="#DBEAFE"/>
+  <text x="360" y="214" font-family="'Segoe UI',Arial,sans-serif" font-size="9" fill="#2563EB" text-anchor="middle">Design</text>
+  <rect x="393" y="202" width="66" height="16" rx="4" fill="#DBEAFE"/>
+  <text x="426" y="214" font-family="'Segoe UI',Arial,sans-serif" font-size="9" fill="#2563EB" text-anchor="middle">Architecture</text>
+  <rect x="465" y="202" width="38" height="16" rx="4" fill="#DBEAFE"/>
+  <text x="484" y="214" font-family="'Segoe UI',Arial,sans-serif" font-size="9" fill="#2563EB" text-anchor="middle">ADRs</text>
+
+  <!-- ─────────────────────────────────────────── -->
+  <!--  AGENT CARD 2: Code Review (SELECTED)       -->
+  <!-- ─────────────────────────────────────────── -->
+  <rect x="265" y="246" width="433" height="94" rx="9" fill="#FFFBEB" stroke="#F59E0B" stroke-width="1.5"/>
+
+  <rect x="281" y="262" width="40" height="40" rx="9" fill="#F59E0B"/>
+  <text x="301" y="287" font-family="'Segoe UI',Arial,sans-serif" font-size="17" font-weight="800" fill="white" text-anchor="middle">R</text>
+
+  <text x="333" y="278" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#1C1B2E">Code Review Agent</text>
+  <rect x="435" y="266" width="82" height="16" rx="4" fill="#FFFBEB" stroke="#F59E0B" stroke-width="0.75"/>
+  <text x="476" y="278" font-family="'Segoe UI',Arial,sans-serif" font-size="9" font-weight="600" fill="#D97706" text-anchor="middle">Quality  Gate</text>
+
+  <!-- Toggle ON -->
+  <rect x="653" y="266" width="37" height="20" rx="10" fill="#F59E0B"/>
+  <circle cx="680" cy="276" r="8" fill="white"/>
+
+  <text x="333" y="295" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#6B7280">OWASP, Code Quality, Patterns, Test Coverage, Security Checks</text>
+
+  <rect x="333" y="306" width="52" height="16" rx="4" fill="#FEF3C7"/>
+  <text x="359" y="318" font-family="'Segoe UI',Arial,sans-serif" font-size="9" fill="#D97706" text-anchor="middle">Security</text>
+  <rect x="391" y="306" width="52" height="16" rx="4" fill="#FEF3C7"/>
+  <text x="417" y="318" font-family="'Segoe UI',Arial,sans-serif" font-size="9" fill="#D97706" text-anchor="middle">Quality</text>
+  <rect x="449" y="306" width="52" height="16" rx="4" fill="#FEF3C7"/>
+  <text x="475" y="318" font-family="'Segoe UI',Arial,sans-serif" font-size="9" fill="#D97706" text-anchor="middle">OWASP</text>
+
+  <!-- ─────────────────────────────────────────── -->
+  <!--  AGENT CARD 3: DevOps (INACTIVE)            -->
+  <!-- ─────────────────────────────────────────── -->
+  <rect x="265" y="350" width="433" height="94" rx="9" fill="#ffffff" stroke="#E2E4E9" stroke-width="1.5"/>
+
+  <rect x="281" y="366" width="40" height="40" rx="9" fill="#E5E7EB"/>
+  <text x="301" y="391" font-family="'Segoe UI',Arial,sans-serif" font-size="17" font-weight="800" fill="#9CA3AF" text-anchor="middle">D</text>
+
+  <text x="333" y="382" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#9CA3AF">DevOps Agent</text>
+  <rect x="428" y="370" width="94" height="16" rx="4" fill="#F9FAFB" stroke="#E2E4E9" stroke-width="0.75"/>
+  <text x="475" y="382" font-family="'Segoe UI',Arial,sans-serif" font-size="9" fill="#9CA3AF" text-anchor="middle">Pipeline  Owner</text>
+
+  <!-- Toggle OFF -->
+  <rect x="653" y="370" width="37" height="20" rx="10" fill="#E5E7EB"/>
+  <circle cx="663" cy="380" r="8" fill="white"/>
+
+  <text x="333" y="399" font-family="'Segoe UI',Arial,sans-serif" font-size="11" fill="#9CA3AF">CI/CD Pipelines, Container Configs, Release Management</text>
+
+  <rect x="333" y="410" width="40" height="16" rx="4" fill="#F3F4F6"/>
+  <text x="353" y="422" font-family="'Segoe UI',Arial,sans-serif" font-size="9" fill="#9CA3AF" text-anchor="middle">CI/CD</text>
+  <rect x="379" y="410" width="42" height="16" rx="4" fill="#F3F4F6"/>
+  <text x="400" y="422" font-family="'Segoe UI',Arial,sans-serif" font-size="9" fill="#9CA3AF" text-anchor="middle">Docker</text>
+  <rect x="427" y="410" width="64" height="16" rx="4" fill="#F3F4F6"/>
+  <text x="459" y="422" font-family="'Segoe UI',Arial,sans-serif" font-size="9" fill="#9CA3AF" text-anchor="middle">Deployments</text>
+
+  <!-- Add Custom Agent dashed button -->
+  <rect x="265" y="456" width="433" height="42" rx="8" fill="#FAFAFA" stroke="#C4C6D4" stroke-width="1.5" stroke-dasharray="5 4"/>
+  <text x="481" y="481" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#5B5EF4" font-weight="600" text-anchor="middle">+  Custom Agent hinzufuegen</text>
+
+  <!-- Info box: auto-generated note -->
+  <rect x="265" y="510" width="433" height="48" rx="8" fill="#F0FDF4" stroke="#BBF7D0" stroke-width="1"/>
+  <rect x="281" y="522" width="5" height="24" rx="2.5" fill="#22D3A5"/>
+  <text x="296" y="532" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#065F46">copilot-instructions.md wird automatisch generiert</text>
+  <text x="296" y="548" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#047857">Basierend auf deiner Agent-Auswahl entsteht die Datei mit allen Scopes und Instructions</text>
+
+  <!-- Navigation buttons -->
+  <rect x="265" y="574" width="98" height="36" rx="8" fill="#ffffff" stroke="#E2E4E9" stroke-width="1.5"/>
+  <text x="314" y="596" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#374151" text-anchor="middle" font-weight="500">&#8592; Zurueck</text>
+
+  <rect x="575" y="574" width="123" height="36" rx="8" fill="url(#btnGrad)"/>
+  <text x="636" y="596" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="white" text-anchor="middle" font-weight="600">Weiter  &#8250;</text>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!--  RIGHT PANEL — CODE PREVIEW                 -->
+  <!-- ═══════════════════════════════════════════ -->
+  <rect x="740" y="52" width="220" height="588" fill="#0F1117"/>
+
+  <!-- Panel header -->
+  <rect x="740" y="52" width="220" height="40" fill="#161B22"/>
+  <text x="754" y="74" font-family="'Segoe UI',Arial,sans-serif" font-size="10" font-weight="600" letter-spacing="0.8" fill="#8B949E">LIVE VORSCHAU</text>
+  <rect x="873" y="62" width="72" height="20" rx="4" fill="#21262D" stroke="#30363D" stroke-width="0.75"/>
+  <text x="909" y="76" font-family="'Segoe UI',Arial,sans-serif" font-size="9" fill="#58A6FF" text-anchor="middle">5 dateien</text>
+
+  <!-- File tabs bar -->
+  <rect x="740" y="92" width="220" height="26" fill="#1C2128"/>
+  <!-- Active tab -->
+  <rect x="740" y="92" width="120" height="26" fill="#0F1117"/>
+  <rect x="740" y="116" width="120" height="2" fill="#5B5EF4"/>
+  <text x="752" y="109" font-family="Consolas,'Courier New',monospace" font-size="9" fill="#C9D1D9">architect.agent.md</text>
+  <!-- Inactive tab -->
+  <text x="866" y="109" font-family="Consolas,'Courier New',monospace" font-size="9" fill="#6B7280">review.agent.md</text>
+
+  <!-- Code content (clipped) -->
+  <g clip-path="url(#codeClip)">
+    <text x="754" y="134" font-family="Consolas,'Courier New',monospace" font-size="9" fill="#8B949E">---</text>
+    <text x="754" y="148" font-family="Consolas,'Courier New',monospace" font-size="9" fill="#79C0FF">name<tspan fill="#C9D1D9">: architect</tspan></text>
+    <text x="754" y="162" font-family="Consolas,'Courier New',monospace" font-size="9" fill="#79C0FF">description<tspan fill="#C9D1D9">: |</tspan></text>
+    <text x="762" y="176" font-family="Consolas,'Courier New',monospace" font-size="9" fill="#A5D6FF">  AI Architect Agent fuer</text>
+    <text x="762" y="190" font-family="Consolas,'Courier New',monospace" font-size="9" fill="#A5D6FF">  System Design und ADRs</text>
+    <text x="754" y="204" font-family="Consolas,'Courier New',monospace" font-size="9" fill="#79C0FF">model<tspan fill="#C9D1D9">: gpt-4o</tspan></text>
+    <text x="754" y="218" font-family="Consolas,'Courier New',monospace" font-size="9" fill="#79C0FF">tools<tspan fill="#C9D1D9">:</tspan></text>
+    <text x="762" y="232" font-family="Consolas,'Courier New',monospace" font-size="9" fill="#C9D1D9">  - codebase</text>
+    <text x="762" y="246" font-family="Consolas,'Courier New',monospace" font-size="9" fill="#C9D1D9">  - github</text>
+    <text x="754" y="260" font-family="Consolas,'Courier New',monospace" font-size="9" fill="#8B949E">---</text>
+
+    <text x="754" y="278" font-family="Consolas,'Courier New',monospace" font-size="9" fill="#E6EDF3"># Architect Agent</text>
+
+    <text x="754" y="298" font-family="Consolas,'Courier New',monospace" font-size="9" fill="#E6EDF3">## Accountability</text>
+    <text x="754" y="312" font-family="Consolas,'Courier New',monospace" font-size="9" fill="#A5D6FF">**Owner:** Tech Lead</text>
+    <text x="754" y="326" font-family="Consolas,'Courier New',monospace" font-size="9" fill="#A5D6FF">**Scope:** System-wide</text>
+
+    <text x="754" y="346" font-family="Consolas,'Courier New',monospace" font-size="9" fill="#E6EDF3">## Responsibilities</text>
+    <text x="754" y="360" font-family="Consolas,'Courier New',monospace" font-size="9" fill="#7EE787">- High-level System Design</text>
+    <text x="754" y="374" font-family="Consolas,'Courier New',monospace" font-size="9" fill="#7EE787">- API Contract Definitions</text>
+    <text x="754" y="388" font-family="Consolas,'Courier New',monospace" font-size="9" fill="#7EE787">- Architecture Decision</text>
+    <text x="762" y="402" font-family="Consolas,'Courier New',monospace" font-size="9" fill="#7EE787">  Records (ADRs)</text>
+    <text x="754" y="416" font-family="Consolas,'Courier New',monospace" font-size="9" fill="#7EE787">- Tech Stack Decisions</text>
+
+    <text x="754" y="436" font-family="Consolas,'Courier New',monospace" font-size="9" fill="#E6EDF3">## Instructions</text>
+    <text x="754" y="450" font-family="Consolas,'Courier New',monospace" font-size="9" fill="#8B949E">You are the architect of</text>
+    <text x="754" y="464" font-family="Consolas,'Courier New',monospace" font-size="9" fill="#8B949E">this project. Focus on</text>
+    <text x="754" y="478" font-family="Consolas,'Courier New',monospace" font-size="9" fill="#8B949E">high-level design and</text>
+    <text x="754" y="492" font-family="Consolas,'Courier New',monospace" font-size="9" fill="#8B949E">architectural boundaries.</text>
+    <text x="754" y="506" font-family="Consolas,'Courier New',monospace" font-size="9" fill="#8B949E">Always consider scalabi-</text>
+    <text x="754" y="520" font-family="Consolas,'Courier New',monospace" font-size="9" fill="#8B949E">lity and maintainability.</text>
+    <text x="754" y="534" font-family="Consolas,'Courier New',monospace" font-size="9" fill="#8B949E">Prefer proven patterns...</text>
+  </g>
+
+  <!-- Fade-out overlay at bottom of code -->
+  <rect x="740" y="490" width="220" height="80" fill="url(#fadeCode)"/>
+
+  <!-- Panel footer actions -->
+  <rect x="740" y="570" width="220" height="70" fill="#161B22"/>
+  <rect x="740" y="570" width="220" height="1" fill="#30363D"/>
+
+  <rect x="752" y="582" width="85" height="26" rx="5" fill="#21262D" stroke="#30363D" stroke-width="0.75"/>
+  <text x="794" y="599" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#8B949E" text-anchor="middle">Kopieren</text>
+
+  <rect x="845" y="582" width="104" height="26" rx="5" fill="#238636"/>
+  <text x="897" y="599" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="white" text-anchor="middle">&#8595;  Download .zip</text>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!--  BOTTOM ACCENT BAR                          -->
+  <!-- ═══════════════════════════════════════════ -->
+  <rect x="0" y="634" width="960" height="6" fill="url(#btnGrad)"/>
+
+</svg>

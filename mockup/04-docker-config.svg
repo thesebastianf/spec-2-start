@@ -1,0 +1,170 @@
+<svg width="960" height="700" viewBox="0 0 960 700" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="headerGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#13111A"/>
+      <stop offset="100%" stop-color="#1E1B30"/>
+    </linearGradient>
+    <linearGradient id="btnGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#5B5EF4"/>
+      <stop offset="100%" stop-color="#7C3AED"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="960" height="700" fill="#F0F2F5"/>
+
+  <!-- Header -->
+  <rect width="960" height="52" fill="url(#headerGrad)"/>
+  <rect x="16" y="13" width="26" height="26" rx="7" fill="#5B5EF4"/>
+  <text x="29" y="30" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="800" fill="white" text-anchor="middle">S2</text>
+  <text x="50" y="33" font-family="'Segoe UI',Arial,sans-serif" font-size="16" font-weight="700" fill="white">Spec-2-Start</text>
+
+  <!-- Step bar -->
+  <rect x="240" y="14" width="520" height="24" rx="12" fill="#ffffff0D"/>
+  <rect x="244" y="16" width="76" height="20" rx="10" fill="#22D3A530"/>
+  <text x="282" y="30" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#22D3A5" text-anchor="middle">&#10003; Projekt</text>
+  <rect x="324" y="16" width="90" height="20" rx="10" fill="#22D3A530"/>
+  <text x="369" y="30" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#22D3A5" text-anchor="middle">&#10003; Architektur</text>
+  <rect x="418" y="16" width="70" height="20" rx="10" fill="#5B5EF4"/>
+  <text x="453" y="30" font-family="'Segoe UI',Arial,sans-serif" font-size="10" font-weight="700" fill="white" text-anchor="middle">3 Docker</text>
+  <text x="520" y="30" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#6B7280" text-anchor="middle">4 Agents</text>
+  <text x="600" y="30" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#6B7280" text-anchor="middle">5 Instructions</text>
+  <text x="690" y="30" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#6B7280" text-anchor="middle">6 Generate</text>
+
+  <!-- Repo badge -->
+  <rect x="790" y="15" width="154" height="22" rx="11" fill="#22D3A515"/>
+  <circle cx="806" cy="26" r="5" fill="#22D3A5"/>
+  <text x="818" y="30" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#22D3A5">user/my-project</text>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!--  LEFT: Docker Config                         -->
+  <!-- ═══════════════════════════════════════════ -->
+  <rect x="40" y="68" width="500" height="608" rx="14" fill="#ffffff" stroke="#E2E4E9" stroke-width="1"/>
+
+  <text x="64" y="100" font-family="'Segoe UI',Arial,sans-serif" font-size="20" font-weight="700" fill="#1C1B2E">Docker &amp; Environment</text>
+  <text x="64" y="118" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#6B7280">Konfiguriere docker-compose Services und Environment-Variablen</text>
+
+  <!-- Rule box -->
+  <rect x="64" y="132" width="452" height="72" rx="8" fill="#FFF7ED" stroke="#FDBA74" stroke-width="1"/>
+  <rect x="80" y="140" width="4" height="56" rx="2" fill="#FB923C"/>
+  <text x="96" y="155" font-family="'Segoe UI',Arial,sans-serif" font-size="11" font-weight="700" fill="#9A3412">Standard-Regeln (automatisch angewendet)</text>
+  <text x="96" y="170" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#C2410C">&#8226; docker-compose.yaml-example + .env-example = immer vollstaendig</text>
+  <text x="96" y="183" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#C2410C">&#8226; Lokale Kopien (docker-compose.yaml, .env) via .gitignore geschuetzt</text>
+  <text x="96" y="196" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#C2410C">&#8226; Clone-Skript erstellt lokale Dateien automatisch aus Examples</text>
+
+  <!-- Services section -->
+  <text x="64" y="228" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#1C1B2E">Services</text>
+
+  <!-- Service 1: App -->
+  <rect x="64" y="238" width="452" height="52" rx="8" fill="#F0FDF4" stroke="#BBF7D0" stroke-width="1"/>
+  <rect x="78" y="250" width="32" height="28" rx="6" fill="#22D3A5"/>
+  <text x="94" y="268" font-family="Consolas,monospace" font-size="12" fill="white" text-anchor="middle">ap</text>
+  <text x="120" y="261" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="600" fill="#374151">app</text>
+  <text x="120" y="278" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#6B7280">node:20-alpine  &#183;  Port 3000</text>
+  <rect x="468" y="254" width="36" height="24" rx="5" fill="#22D3A520"/>
+  <text x="486" y="270" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#22D3A5" text-anchor="middle">&#10003;</text>
+
+  <!-- Service 2: Postgres -->
+  <rect x="64" y="296" width="452" height="52" rx="8" fill="#F0FDF4" stroke="#BBF7D0" stroke-width="1"/>
+  <rect x="78" y="308" width="32" height="28" rx="6" fill="#3B82F6"/>
+  <text x="94" y="326" font-family="Consolas,monospace" font-size="12" fill="white" text-anchor="middle">pg</text>
+  <text x="120" y="319" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="600" fill="#374151">postgres</text>
+  <text x="120" y="336" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#6B7280">postgres:16-alpine  &#183;  Port 5432</text>
+  <rect x="468" y="312" width="36" height="24" rx="5" fill="#22D3A520"/>
+  <text x="486" y="328" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#22D3A5" text-anchor="middle">&#10003;</text>
+
+  <!-- Service 3: Redis -->
+  <rect x="64" y="354" width="452" height="52" rx="8" fill="#F0FDF4" stroke="#BBF7D0" stroke-width="1"/>
+  <rect x="78" y="366" width="32" height="28" rx="6" fill="#EF4444"/>
+  <text x="94" y="384" font-family="Consolas,monospace" font-size="12" fill="white" text-anchor="middle">rd</text>
+  <text x="120" y="377" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="600" fill="#374151">redis</text>
+  <text x="120" y="394" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#6B7280">redis:7-alpine  &#183;  Port 6379</text>
+  <rect x="468" y="370" width="36" height="24" rx="5" fill="#22D3A520"/>
+  <text x="486" y="386" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#22D3A5" text-anchor="middle">&#10003;</text>
+
+  <!-- Service 4: nginx (optional) -->
+  <rect x="64" y="412" width="452" height="52" rx="8" fill="#ffffff" stroke="#E2E4E9" stroke-width="1.5"/>
+  <rect x="78" y="424" width="32" height="28" rx="6" fill="#E5E7EB"/>
+  <text x="94" y="442" font-family="Consolas,monospace" font-size="12" fill="#9CA3AF" text-anchor="middle">nx</text>
+  <text x="120" y="435" font-family="'Segoe UI',Arial,sans-serif" font-size="12" font-weight="600" fill="#9CA3AF">nginx</text>
+  <text x="120" y="452" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#9CA3AF">nginx:alpine  &#183;  Port 80/443</text>
+  <!-- Toggle off -->
+  <rect x="468" y="428" width="36" height="24" rx="5" fill="#F3F4F6"/>
+  <text x="486" y="444" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#9CA3AF" text-anchor="middle">&#8211;</text>
+  <text x="365" y="442" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#9CA3AF">optional</text>
+
+  <!-- Add service button -->
+  <rect x="64" y="472" width="452" height="36" rx="8" fill="#FAFAFA" stroke="#C4C6D4" stroke-width="1" stroke-dasharray="5 4"/>
+  <text x="290" y="494" font-family="'Segoe UI',Arial,sans-serif" font-size="12" fill="#5B5EF4" text-anchor="middle" font-weight="500">+  Service hinzufuegen</text>
+
+  <!-- Environment Variables -->
+  <rect x="64" y="520" width="452" height="1" fill="#E2E4E9"/>
+  <text x="64" y="544" font-family="'Segoe UI',Arial,sans-serif" font-size="13" font-weight="700" fill="#1C1B2E">.env-example Variablen</text>
+
+  <rect x="64" y="554" width="452" height="100" rx="8" fill="#0F1117"/>
+  <text x="80" y="574" font-family="Consolas,monospace" font-size="10" fill="#79C0FF"># Database</text>
+  <text x="80" y="590" font-family="Consolas,monospace" font-size="10" fill="#C9D1D9">POSTGRES_USER=<tspan fill="#A5D6FF">local_user</tspan></text>
+  <text x="80" y="606" font-family="Consolas,monospace" font-size="10" fill="#C9D1D9">POSTGRES_PASSWORD=<tspan fill="#A5D6FF">change_me_123</tspan></text>
+  <text x="80" y="622" font-family="Consolas,monospace" font-size="10" fill="#C9D1D9">POSTGRES_DB=<tspan fill="#A5D6FF">app_dev</tspan></text>
+  <text x="80" y="638" font-family="Consolas,monospace" font-size="10" fill="#79C0FF"># Redis</text>
+
+  <!-- Nav -->
+  <rect x="64" y="664" width="110" height="36" rx="8" fill="#ffffff" stroke="#E2E4E9" stroke-width="1.5"/>
+  <text x="119" y="686" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="#374151" text-anchor="middle">&#8592; Architektur</text>
+
+  <!-- ═══════════════════════════════════════════ -->
+  <!--  RIGHT: File Preview                         -->
+  <!-- ═══════════════════════════════════════════ -->
+  <rect x="560" y="68" width="360" height="608" rx="14" fill="#ffffff" stroke="#E2E4E9" stroke-width="1"/>
+
+  <text x="584" y="100" font-family="'Segoe UI',Arial,sans-serif" font-size="14" font-weight="700" fill="#1C1B2E">Generierte Dateien</text>
+
+  <!-- Tab area -->
+  <rect x="584" y="110" width="312" height="30" rx="7" fill="#F3F4F6"/>
+  <rect x="586" y="112" width="100" height="26" rx="5" fill="#ffffff"/>
+  <text x="636" y="129" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#374151" text-anchor="middle" font-weight="600">compose.yaml</text>
+  <text x="734" y="129" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#9CA3AF" text-anchor="middle">.env-example</text>
+  <text x="850" y="129" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#9CA3AF" text-anchor="middle">.gitignore</text>
+
+  <!-- Code preview -->
+  <rect x="584" y="148" width="312" height="440" rx="8" fill="#0F1117"/>
+
+  <text x="600" y="170" font-family="Consolas,monospace" font-size="9" fill="#79C0FF"># ===================================</text>
+  <text x="600" y="184" font-family="Consolas,monospace" font-size="9" fill="#79C0FF"># docker-compose.yaml-example</text>
+  <text x="600" y="198" font-family="Consolas,monospace" font-size="9" fill="#79C0FF"># Complete, runnable as-is</text>
+  <text x="600" y="212" font-family="Consolas,monospace" font-size="9" fill="#79C0FF"># ===================================</text>
+  <text x="600" y="232" font-family="Consolas,monospace" font-size="9" fill="#E6EDF3">version: '3.9'</text>
+  <text x="600" y="248" font-family="Consolas,monospace" font-size="9" fill="#E6EDF3"/>
+  <text x="600" y="262" font-family="Consolas,monospace" font-size="9" fill="#79C0FF">services:</text>
+  <text x="600" y="278" font-family="Consolas,monospace" font-size="9" fill="#C9D1D9">  app:</text>
+  <text x="600" y="294" font-family="Consolas,monospace" font-size="9" fill="#C9D1D9">    build: .</text>
+  <text x="600" y="310" font-family="Consolas,monospace" font-size="9" fill="#C9D1D9">    ports:</text>
+  <text x="600" y="326" font-family="Consolas,monospace" font-size="9" fill="#A5D6FF">      - "3000:3000"</text>
+  <text x="600" y="342" font-family="Consolas,monospace" font-size="9" fill="#C9D1D9">    env_file: .env</text>
+  <text x="600" y="358" font-family="Consolas,monospace" font-size="9" fill="#C9D1D9">    depends_on:</text>
+  <text x="600" y="374" font-family="Consolas,monospace" font-size="9" fill="#C9D1D9">      - postgres</text>
+  <text x="600" y="390" font-family="Consolas,monospace" font-size="9" fill="#C9D1D9">      - redis</text>
+  <text x="600" y="410" font-family="Consolas,monospace" font-size="9" fill="#C9D1D9">  postgres:</text>
+  <text x="600" y="426" font-family="Consolas,monospace" font-size="9" fill="#C9D1D9">    image: <tspan fill="#A5D6FF">postgres:16-alpine</tspan></text>
+  <text x="600" y="442" font-family="Consolas,monospace" font-size="9" fill="#C9D1D9">    ports:</text>
+  <text x="600" y="458" font-family="Consolas,monospace" font-size="9" fill="#A5D6FF">      - "5432:5432"</text>
+  <text x="600" y="474" font-family="Consolas,monospace" font-size="9" fill="#C9D1D9">    environment:</text>
+  <text x="600" y="490" font-family="Consolas,monospace" font-size="9" fill="#C9D1D9">      POSTGRES_USER: ${<tspan fill="#7EE787">POSTGRES_USER</tspan>}</text>
+  <text x="600" y="506" font-family="Consolas,monospace" font-size="9" fill="#C9D1D9">      POSTGRES_PASSWORD: ${<tspan fill="#7EE787">PG_PW</tspan>}</text>
+  <text x="600" y="526" font-family="Consolas,monospace" font-size="9" fill="#C9D1D9">  redis:</text>
+  <text x="600" y="542" font-family="Consolas,monospace" font-size="9" fill="#C9D1D9">    image: <tspan fill="#A5D6FF">redis:7-alpine</tspan></text>
+  <text x="600" y="558" font-family="Consolas,monospace" font-size="9" fill="#C9D1D9">    ports:</text>
+  <text x="600" y="574" font-family="Consolas,monospace" font-size="9" fill="#A5D6FF">      - "6379:6379"</text>
+
+  <!-- Files will be generated list at bottom -->
+  <rect x="584" y="596" width="312" height="58" rx="8" fill="#F0FDF4"/>
+  <text x="600" y="614" font-family="'Segoe UI',Arial,sans-serif" font-size="10" font-weight="600" fill="#065F46">Dateien die erzeugt werden:</text>
+  <text x="600" y="630" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#047857">docker-compose.yaml-example  &#183;  .env-example</text>
+  <text x="600" y="644" font-family="'Segoe UI',Arial,sans-serif" font-size="10" fill="#047857">.gitignore (Eintraege)  &#183;  init-local.sh</text>
+
+  <!-- CTA bottom right -->
+  <rect x="754" y="664" width="166" height="36" rx="8" fill="url(#btnGrad)"/>
+  <text x="837" y="686" font-family="'Segoe UI',Arial,sans-serif" font-size="13" fill="white" text-anchor="middle" font-weight="600">Agents konfigurieren &#8250;</text>
+
+  <!-- Bottom accent -->
+  <rect x="0" y="694" width="960" height="6" fill="url(#btnGrad)"/>
+</svg>
