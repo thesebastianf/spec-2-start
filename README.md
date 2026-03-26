@@ -27,10 +27,14 @@ In the era of AI-assisted coding (Cursor, Claude, GPT-4), your repository struct
 | Step | Focus | Description |
 | :--- | :--- | :--- |
 | **01** | Repo Selection | Define your project name and core path. |
+![alt text](image.png)
 | **02** | Description | High-level project goal and scope. |
 | **03** | Architecture | Define your tech stack (Next.js, FastAPI, etc.). |
+![alt text](image-1.png)
 | **04** | Docker | Auto-generate your container configurations. |
 | **05** | AI Agents | Configure your specialized AI workforce. |
+![alt text](image-3.png)
+![alt text](image-4.png)
 
 -----
 
@@ -117,5 +121,3 @@ We are building the future of AI-driven development. If you have ideas for bette
 **Built with ❤️ for the AI Developer Community by [thesebastianf](https://www.google.com/search?q=https://github.com/thesebastianf).**
 
 -----
-
-Would you like me to generate a specific **MCP Agent markdown** template for one of your roles to include in the `standards/agents/` folder?
