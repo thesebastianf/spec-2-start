@@ -1,204 +1,121 @@
-# Spec-2-Start v1.0
+-----
 
-> Persönliche Repo-Standards + Wizard Web-App für das initiale Setup neuer Repositories.
+# 🚀 Spec-2-Start: The Ultimate AI-Native Dev Environment Wizard
 
-## Features
+**Stop wasting hours on boilerplate and environment configuration. Start building with a world-class AI architecture in seconds.**
 
-- **7-Step Wizard** — von Repo-Auswahl bis Push to GitHub
-- **Real GitHub Push** — direkt über die GitHub REST API (Git Trees API)
-- **ZIP Download** — client-seitig via JSZip, kein Server nötig
-- **Themes** — Light, Dark, Teal, Retro (8-bit CRT Style)
-- **Sprache** — Deutsch / English umschaltbar (i18n)
-- **Self-Hosted** — Docker Container mit nginx:alpine, Health-Checks, CSP Headers
-- **Kein Build-Step** — pures HTML/CSS/JS, funktioniert auch als lokale Datei
+`Spec-2-Start` is a lightweight, high-performance scaffolding engine designed to bridge the gap between a raw idea ("Spec") and a production-ready repository ("Start"). It provides a **Top-Tier AI Setup** including standardized instructions, scalable architecture, and MCP (Model Context Protocol) agent markdowns.
 
----
+-----
 
-## Repo-Struktur
+## 🔥 Why Spec-2-Start?
 
-Das Repo ist in drei klare Bereiche aufgeteilt:
+In the era of AI-assisted coding (Cursor, Claude, GPT-4), your repository structure is your competitive advantage. `Spec-2-Start` pre-configures your environment so that both you and your AI agents can work with maximum context and zero friction.
 
-```
+### 🌟 Key Highlights
+
+  * **Wizard-Driven Setup:** A pure HTML/JS interface that walks you through repo selection, tech architecture, and agent configuration.
+  * **AI-Ready Architecture:** Pre-defined folder structures optimized for LLM context windows.
+  * **MCP Agent Integration:** Built-in Markdown templates for orchestrators, frontend, backend, and QA agents.
+  * **Zero Dependencies:** No `npm install`, no `node_modules` clutter. Just pure, fast, and efficient logic.
+  * **Standardized Instructions:** System prompts and `.cursorrules` templates that make your AI significantly smarter.
+
+-----
+
+## 📸 The Wizard Interface
+
+| Step | Focus | Description |
+| :--- | :--- | :--- |
+| **01** | Repo Selection | Define your project name and core path. |
+| **02** | Description | High-level project goal and scope. |
+| **03** | Architecture | Define your tech stack (Next.js, FastAPI, etc.). |
+| **04** | Docker | Auto-generate your container configurations. |
+| **05** | AI Agents | Configure your specialized AI workforce. |
+
+-----
+
+## 🚀 Quick Start
+
+You can run the Wizard in two ways. Both are extremely lightweight and require **no build steps**.
+
+### Option 1: Local (Zero Setup)
+
+The app is pure HTML/CSS/JS. Just open the file and you are ready to go.
+
+  * **Windows:** `start app/index.html`
+  * **macOS:** `open app/index.html`
+  * **Linux:** `xdg-open app/index.html`
+
+> [\!TIP]
+> No server, no Docker, no npm. It works instantly in your favorite browser.
+
+-----
+
+### Option 2: Self-Hosted with Docker
+
+Ideal for permanent deployment as a team service with Nginx, health checks, and security headers.
+
+1.  **Clone & Navigate:**
+    ```bash
+    git clone https://github.com/thesebastianf/spec-2-start
+    cd spec-2-start/docker
+    ```
+2.  **Initialize local files:**
+    ```bash
+    bash init.sh              # Linux / macOS
+    .\init.ps1                # Windows (PowerShell)
+    ```
+3.  **Launch:**
+    ```bash
+    docker compose up --build -d
+    ```
+4.  **Open Browser:** `http://localhost:8080`
+
+**Environment Variables:**
+| Variable | Default | Description |
+| :--- | :--- | :--- |
+| `APP_PORT` | `8080` | Port where the Wizard is reachable. |
+
+-----
+
+## 📂 Project Structure
+
+```text
 Spec-2-Start/
-│
-├── app/                        ← WIZARD APP (pures HTML/CSS/JS)
-│   ├── index.html
-│   ├── styles.css
-│   └── app.js
-│
-├── docker/                     ← DOCKER DEPLOYMENT
-│   ├── Dockerfile              #   nginx:alpine — kein Build-Step
-│   ├── nginx.conf              #   Server-Config + Security Headers
-│   ├── docker-compose.yaml-example
-│   ├── .env-example
-│   ├── init.sh                 #   Setup-Script (Linux / macOS)
-│   └── init.ps1                #   Setup-Script (Windows PowerShell)
-│
-├── standards/                  ← REPO-STANDARDS (Referenz-Dateien)
-│   ├── agents/                 #   Default Agent-Definitionen
-│   │   ├── orchestrator.agent.md
-│   │   ├── frontend.agent.md
-│   │   ├── backend.agent.md
-│   │   ├── database.agent.md
-│   │   └── reviewer-qa.agent.md
-│   └── docker/                 #   Docker & Env Konventionen
-│       ├── docker-compose.yaml-example
-│       ├── .env-example
-│       ├── init-local.sh
-│       └── README.md
-│
-├── templates/                  ← DATEI-TEMPLATES (für neue Repos)
-│   ├── copilot-instructions.template.md
-│   ├── README.template.md
-│   ├── Architecture.template.md
-│   ├── AGENTS.template.md
-│   └── executed-prompts.template.md
-│
-├── mockup/                     ← SVG MOCKUPS (alle Wizard-Seiten)
-│   ├── 01-repo-selection.svg
-│   ├── 02-project-description.svg
-│   ├── 03-tech-architecture.svg
-│   ├── 04-docker-config.svg
-│   ├── 05-agents-config.svg
-│   ├── 06-instructions.svg
-│   └── 07-review-generate.svg
-│
-├── .dockerignore
-├── .gitignore
-└── README.md
+├── app/                # WIZARD APP (Pure HTML/CSS/JS)
+├── docker/             # DOCKER DEPLOYMENT (Nginx:alpine, no build step)
+├── standards/          # REPO-STANDARDS (Reference files for your AI)
+│   ├── agents/         # Orchestrator, Frontend, Backend, QA templates
+│   └── docker/         # Docker & Env conventions
+├── templates/          # FILE TEMPLATES (README, Architecture, Copilot)
+├── mockup/             # SVG MOCKUPS (Visual reference of the Wizard)
+└── README.md           # You are here
 ```
 
-| Ordner | Zweck | Wann brauchst du ihn? |
-|--------|-------|-----------------------|
-| `app/` | Wizard-Quellcode (HTML/CSS/JS) | Immer — ist die App selbst |
-| `docker/` | Containerisierung mit nginx | Wenn du den Wizard als Service hosten willst |
-| `standards/` | Wiederverwendbare Repo-Standards | Referenz-Dateien die der Wizard in neue Repos schreibt |
-| `templates/` | Ausfüllbare Datei-Templates | Werden vom Wizard mit Projekt-Daten befüllt |
-| `mockup/` | UI-Entwürfe als SVG | Design-Dokumentation |
+-----
 
----
+## 🛠 Useful Commands (Docker)
 
-## Variante 1: Lokal im Browser (kein Setup)
+Run these commands from the `docker/` directory:
 
-Die App ist pures HTML/CSS/JS — einfach die Datei öffnen:
+  * **Rebuild & Start:** `docker compose up --build -d`
+  * **Stop Service:** `docker compose down`
+  * **View Logs:** `docker compose logs -f wizard`
+  * **Check Status:** `docker compose ps`
 
-```bash
-# Windows
-start app/index.html
+-----
 
-# macOS
-open app/index.html
+## 🤝 Contributing
 
-# Linux
-xdg-open app/index.html
-```
+We are building the future of AI-driven development. If you have ideas for better MCP templates or architecture patterns, feel free to open a PR\!
 
-Kein Server, kein Docker, kein npm. Funktioniert sofort.
+1.  Fork the Project
+2.  Create your Feature Branch
+3.  Commit your Changes
+4.  Push & Open a Pull Request
 
----
+**Built with ❤️ for the AI Developer Community by [thesebastianf](https://www.google.com/search?q=https://github.com/thesebastianf).**
 
-## Variante 2: Self-Hosted mit Docker
+-----
 
-Für dauerhaften Betrieb als Service mit nginx, Health-Checks und Security Headers.
-
-```bash
-# 1. Repo klonen
-git clone https://github.com/your-user/Spec-2-Start
-cd Spec-2-Start/docker
-
-# 2. Lokale Dateien initialisieren
-bash init.sh              # Linux / macOS
-.\init.ps1                # Windows (PowerShell)
-
-# 3. Bauen und starten
-docker compose up --build -d
-
-# 4. Browser öffnen
-# http://localhost:8080
-```
-
-Läuft als **nginx:alpine** Container — kein Node.js, kein Build-Step, kein npm.
-
-| Variable | Default | Beschreibung |
-|----------|---------|-------------|
-| `APP_PORT` | `8080` | Port auf dem der Wizard erreichbar ist |
-
-### Nützliche Commands
-
-Alle Commands aus dem `docker/`-Verzeichnis ausführen:
-
-```bash
-docker compose up --build -d   # Starten (mit Rebuild)
-docker compose down             # Stoppen
-docker compose logs -f wizard   # Logs anschauen
-docker compose ps               # Status
-```
-
----
-
-## Wizard Flow
-
-### Schritt 0 — Repo auswählen
-GitHub Repo verbinden, neu erstellen oder nur lokal generieren.
-
-![Schritt 0: Repo Selection](mockup/01-repo-selection.svg)
-
----
-
-### Schritt 1 — Projekt beschreiben
-Projektbeschreibung in einfacher Sprache. Die KI erkennt Begriffe und schlägt den Stack vor.
-
-![Schritt 1: Project Description](mockup/02-project-description.svg)
-
----
-
-### Schritt 2 — Technische Architektur
-KI-generierte technische Architektur mit editierbaren Blöcken und Architecture.md Vorschau.
-
-![Schritt 2: Tech Architecture](mockup/03-tech-architecture.svg)
-
----
-
-### Schritt 3 — Docker & Environment
-Services konfigurieren, Compose-Config und Environment-Variablen mit Live-Vorschau.
-
-![Schritt 3: Docker Config](mockup/04-docker-config.svg)
-
----
-
-### Schritt 4 — Agent Population
-AI Agent Population mit klarer Accountability — editierbar, löschbar, erweiterbar.
-
-![Schritt 4: Agents Config](mockup/05-agents-config.svg)
-
----
-
-### Schritt 5 — Projekt-Instructions
-Regeln die IMMER gelten, werden direkt in `copilot-instructions.md` geschrieben.
-
-![Schritt 5: Instructions](mockup/06-instructions.svg)
-
----
-
-### Schritt 6 — Review & Generate
-Alle generierten Dateien prüfen, dann Push to GitHub oder Download als ZIP.
-
-![Schritt 6: Review & Generate](mockup/07-review-generate.svg)
-
----
-
-## Default Agents
-
-| Agent | Role | Scope |
-|-------|------|-------|
-| Orchestrator | Project Coordinator | Project-wide |
-| Frontend | UI/UX Developer | Components, Pages, Styles |
-| Backend | API & Services Dev | Routes, Services, Middleware |
-| Database & Data | Data Engineer | Schema, Migrations, Queries |
-| Reviewer / QA | Quality Guardian | All Files, Tests |
-
-## Default Instructions
-
-- **Prompt Documentation:** Every executed prompt is logged in `executed-prompts.md`
-- **Keep Docs Up-to-Date:** README.md and Architecture.md must stay current
-- **SVG Mockups First:** Create SVG mockups for all UI pages before implementation
+Would you like me to generate a specific **MCP Agent markdown** template for one of your roles to include in the `standards/agents/` folder?
